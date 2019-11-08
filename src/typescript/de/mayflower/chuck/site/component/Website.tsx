@@ -143,6 +143,9 @@
             );
         }
 
+        /***************************************************************************************************************
+        *   Being invoked when the content layout has completed fading out.
+        ***************************************************************************************************************/
         private onContentLayoutFadeOutCompleted() : void
         {
             gp.Debug.major.log( 'onContentLayoutFadeOutCompleted being invoked' );

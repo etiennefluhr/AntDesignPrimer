@@ -1,15 +1,15 @@
 
 # Node.js
-node_modules
+/node_modules
 
 # system
 .DS_Store
 
 # JetBrains IDEs
-.idea
+/.idea
 *.iml
 
 # build and output paths
-bin
-doc
+/bin
+/doc
 /dist/js/

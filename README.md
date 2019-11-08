@@ -36,19 +36,33 @@ All Webpack bundler settings reside in `/webpack.config.js`.
 
 Same as target `webpack:development` but compilation in `dist/js/bundle.js` is minified and obfuscated.
 
-### Run Webpack in production mode
+### Run the Webpack Dev Server
 `npm run webpack:devserver`
 
 Same as target `webpack:development` but no output to `bin` or `dist/js/bundle.js` occurs on disk.
-Instead, the resource `dist/js/bundle.js` is served virtually and the folder `dist` is mounted in the Webpack Dev Server.
+Instead, the resource `dist/js/bundle.js` is served virtually and the folder `/dist` is mounted in the Webpack Dev Server.
+
+All Webpack Dev Server settings reside in `/webpack.config.js` in section `config.devServer`.
+
 Find the created site in your browser on
 ```
 http://localhost:5000/
 ```
 
-All Webpack Dev Server settings reside in `/webpack.config.js` in section `config.devServer`.
+--- LOGO TypeDoc ---
 
+### Generate TypeDoc
+`npm run typedoc:generate`
 
+Generates a HTML documentation at `/doc` for all TypeScript sources under `/src/typescript`.
+
+--- LOGO TSLint ---
+
+### Run TSLint
+`npm run tslint:check`
+
+Runs the TypeScript Linter on all TypeScript sources under `/src`.
+Linter Settings reside in `/tslint.json`.
 
 
 
