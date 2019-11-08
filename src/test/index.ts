@@ -1,4 +1,7 @@
 
+    import * as Enzyme from 'enzyme';
+    import Adapter     from 'enzyme-adapter-react-16';
+
     /*******************************************************************************************************************
     *   Initializes the testing framework.
     *******************************************************************************************************************/
@@ -11,3 +14,6 @@
         // return new Buffer( str ).toString( 'base64' );
         return Buffer.from( str ).toString( 'base64' );
     };
+
+    /** Set the enzyme adapter for jest/React tests */
+    Enzyme.configure( { adapter: new Adapter() } );

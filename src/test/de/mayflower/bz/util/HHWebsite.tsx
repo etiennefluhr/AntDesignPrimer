@@ -1,17 +1,15 @@
 
     import * as chai   from 'chai';
     import * as React  from 'react';
-/*
     import * as Enzyme from 'enzyme';
-    import * as hhpp   from '../../../../../../../../typescript/de/mayflower/hhpp';
-*/
+    import * as chuck  from '../../../../../typescript/de/mayflower/chuck';
+
     describe( 'React component HHWebsite', () =>
     {
-/*
         const wrapper: Enzyme.ShallowWrapper = Enzyme.shallow(
-            <hhpp.HHWebsite />
+            <chuck.Website />
         );
-        const demoElement:hhpp.HHWebsite = wrapper.instance() as hhpp.HHWebsite;
+        const demoElement:chuck.Website = wrapper.instance() as chuck.Website;
 
         it( 'create the React component', () =>
         {
@@ -22,5 +20,5 @@
         {
             chai.expect( demoElement.props.elementID ).to.equal( 'DemoElement1' );
         });
-*/
+
     });

@@ -1,5 +1,7 @@
 # Ant Design Primer
 
+--- LOGO Ant Design ---
+
 ## Tech Stack
 - TypeScript 3.4.5
 - Ant Design 3.1
@@ -10,6 +12,15 @@
 - Jest 24.9
 - TypeDoc 0.14
 - TSLint 5.16
+
+<hr>
+
+
+## Ant Design meets the International Chuck Norris Database
+
+--- LOGO Chuck Norris ---
+
+This ..
 
 <hr>
 
