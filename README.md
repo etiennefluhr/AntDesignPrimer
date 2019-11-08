@@ -75,11 +75,28 @@ Generates a HTML documentation at `/doc` for all TypeScript sources under `/src/
 Runs the TypeScript Linter on all TypeScript sources under `/src`.
 Linter Settings reside in `/tslint.json`.
 
+--- LOGO Mocha ---
 
+### Run all Tests with Mocha
+`npm run test:all`
 
+Invoke the Mocha Test runner to run all defined Tests in TypeScript files under `/src/test` .
+The configuration comes as parameters of the command.
 
+--- LOGO Jest ---
 
+### Run all Tests with Jest
+`npm run test:jest`
 
+Invoke the Jest Test runner to run all defined Tests in TypeScript files that end with `.test.ts(x)` under `/src/test` .
+The Jest configuration resides in `/package.json` in section `jest`.
+
+### Run all Tests with Jest and generate Code Coverage
+`npm run test:jest-coverage`
+
+Same as target `test:jest` but Code Coverage is generated in `/coverage`.
+
+<hr>
 
 ## Hand Outs
 
