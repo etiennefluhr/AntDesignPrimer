@@ -9,7 +9,7 @@
     "repository": "https://github.com/christopherstock/AntDesignPrimer.git",
     "bugs": "https://github.com/christopherstock/AntDesignPrimer/issues",
     "scripts": {
-        "tscompile": "tsc",
+        "typescript:compile": "tsc",
         "webpack:dev": "webpack --mode=development --watch",
         "webpack:production": "webpack --mode=production --watch",
         "webpack:devserver": "webpack-dev-server --mode=development",
