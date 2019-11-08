@@ -112,4 +112,18 @@ Same as target `test:jest` but Code Coverage is generated in `/coverage`.
 
 ## Hand Outs
 
+### Warum TypeScript?
 
+https://blog.mayflower.de/6135-typescript.html
+
+### Aufsetzen eines Web-Techstacks mit npm, TypeScript und Webpack
+
+https://blog.mayflower.de/6324-typescript-tooling-npm-webpack.html
+
+### TypeScript im Vergleich zu Java
+
+https://blog.mayflower.de/6344-typeacript-java-entwickler.html
+
+### TypeScript Workshop für Einsteiger
+
+https://blog.mayflower.de/6229-typescript-workshop.html
