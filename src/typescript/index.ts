@@ -1,6 +1,6 @@
 
-    import './de/mayflower/gp/css/gp.less';
-    import * as gp from './de/mayflower/gp';
+    import './de/mayflower/chuck/css/chuck.less';
+    import * as gp from './de/mayflower/chuck';
 
     /*******************************************************************************************************************
     *   Being invoked when the page is loaded completely.

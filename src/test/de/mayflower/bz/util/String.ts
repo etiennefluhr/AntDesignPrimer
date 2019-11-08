@@ -1,6 +1,6 @@
 
     import * as chai from 'chai';
-    import * as gp   from '../../../../../typescript/de/mayflower/gp';
+    import * as gp   from '../../../../../typescript/de/mayflower/chuck';
 
     describe( 'String', () =>
     {
