@@ -106,24 +106,26 @@ Einstellungen für den Linter befinden sich unter `/tslint.json`.
 
 ![Mocha](_ASSET/readme/150px/logo_mocha.png)
 
-### Run all Tests with Mocha
+### Alle TypeScript Tests mit Mocha aufrufen
 `npm run test:all`
 
-Invoke the Mocha Test runner to run all defined Tests in TypeScript files under `/src/test` .
-The configuration comes as parameters of the command.
+Ruft den Mocha Test Runner auf der alle definierten Tests in TypeScript Dateien unterhalb `/src/test` ausführt.
+Die Konfiguration für den Testrunner wird als Parameter im Anschluß an den Befehl definiert.
 
 ![Jest](_ASSET/readme/150px/logo_jest.png)
 
-### Run all Tests with Jest
+### Alle TypeScript Tests mit Jest aufrufen
 `npm run test:jest`
 
-Invoke the Jest Test runner to run all defined Tests in TypeScript files that end with `.test.ts(x)` under `/src/test` .
-The Jest configuration resides in `/package.json` in section `jest`.
+Ruft den Jest Test Runner auf der alle definierten Tests in TypeScript Dateien unterhalb `/src/test` ausführt, 
+die über die Endung `.test.ts(x)` verfügen.
 
-### Run all Tests with Jest and generate Code Coverage
+Die The Konfiguration befindet sich in der `/package.json` im Abschnitt `jest`.
+
+### Alle TypeScript Tests mit Jest aufrufen und Code Coverage generieren
 `npm run test:jest-coverage`
 
-Same as target `test:jest` but Code Coverage is generated in `/coverage`.
+Gleiches Verhalten wie das Target `test:jest` und im Anschluß wird die Code Coverage unter `/coverage` generiert.
 
 <hr>
 
