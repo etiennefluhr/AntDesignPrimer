@@ -1,6 +1,6 @@
 # Ant Design Primer
 
-![Ant Design](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/logo_ant_design.png)
+![Ant Design](_ASSET/readme/logo_ant_design.png)
 
 Hach ich komme aus dem Schwärmen für diese geniale React-Komponentenbibliothek einfach nicht mehr heraus. Ant Design bietet eine vollständige Palette an reaktiven Enterprise UI-Komponenten allererster Güte und ermöglicht darüberhinaus die schnelle Realisierung kompletter, moderner und responsiver Web-Frontends ohne dafür eine einzige Zeile HTML oder CSS Code schreiben zu müssen.
 
@@ -19,7 +19,7 @@ Hach ich komme aus dem Schwärmen für diese geniale React-Komponentenbibliothek
 
 ## Ant Design meets the International Chuck Norris Database
 
-![The International Chuck Norris Database](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/icndb.png)
+![The International Chuck Norris Database](_ASSET/readme/icndb.png)
 
 Wir wollen uns den praktischen Einsatz von TypeScript und React anhand dieser Bibliothek gemeinsam ansehen und ein minimales Web-Frontend damit erstellen. Als Backend bietet sich die International Chuck Norris Database an, eine simple REST-API die wir mit der JavaScript Fetch API ansprechen können und die uns mit unendlich vielen Chuck Norris Witzen versorgt. Beispielsweise liefert hier ein simpler GET-Request auf http://api.icndb.com/jokes/random einen entsprechenden Response Body im JSON Format zurück, den wir anschließend parsen und in unserem Frontend anzeigen können:
 ```
