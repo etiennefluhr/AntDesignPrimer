@@ -6,16 +6,14 @@
     /*******************************************************************************************************************
     *   The main class contains the application's point of entry.
     *
-    *   TODO Update to latest npm packages version.
     *   TODO Add TypeDoc output / jest / coverage output paths to .gitignore.
-    *   TODO Unify names for all tests.
-    *
     *   TODO enrich search group for specifying search categories in API.postSearchMatch!
     *   TODO Add app logo in Menu.render!
     *   TODO extract title and footer to separate components.
     *
-    *   TODO TESTS: Add jest tests.
-    *   TODO TESTS: Mocha: Code Coverage ( package 'nyc' ).
+    *   TODO MINOR Unify names for all tests.
+    *   TODO MINOR Update to latest npm packages version.
+    *   TODO MINOR Update Jest Tests.
     *******************************************************************************************************************/
     export class Main
     {

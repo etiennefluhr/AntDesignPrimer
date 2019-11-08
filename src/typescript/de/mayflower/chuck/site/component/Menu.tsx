@@ -80,6 +80,7 @@
                     }>
 
                         <antd.Menu.Item key={ gp.MenuItem.LEGAL   }>{ gp.MenuItem.LEGAL   }</antd.Menu.Item>
+
                         <antd.Menu.Item key={ gp.MenuItem.IMPRINT }>{ gp.MenuItem.IMPRINT }</antd.Menu.Item>
 
                     </antd.Menu.SubMenu>

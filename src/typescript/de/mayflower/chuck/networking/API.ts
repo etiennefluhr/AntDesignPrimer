@@ -19,7 +19,7 @@
                     () => {
                         onSuccess( gp.Mock.mockSearchGroups() );
                     },
-                    gp.Setting.DEBUG_MOCK_REQUEST_TIMEOUT
+                    gp.Setting.DEBUG_MOCK_REQUEST_DELAY
                 );
                 return;
             }
@@ -57,7 +57,7 @@
                     () => {
                         onSuccess( gp.Mock.mockSearchMatch() );
                     },
-                    gp.Setting.DEBUG_MOCK_REQUEST_TIMEOUT
+                    gp.Setting.DEBUG_MOCK_REQUEST_DELAY
                 );
                 return;
             }

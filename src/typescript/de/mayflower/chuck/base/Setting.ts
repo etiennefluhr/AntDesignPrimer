@@ -13,7 +13,7 @@
         /** Debug switch to mock ALL http requests, allowing offline mode. */
         public  static  readonly    DEBUG_MOCK_ALL_REQUESTS     :boolean            = ( true && Setting.DEBUG_MODE );
         /** Debug mocked timeout for API requests in millis. */
-        public  static  readonly    DEBUG_MOCK_REQUEST_TIMEOUT  :number             = 1000;
+        public  static  readonly    DEBUG_MOCK_REQUEST_DELAY    :number             = 1000;
 
         /** The relative path from index.html where all images reside. */
         public  static  readonly    PATH_IMAGE                  :string             = 'res/image/';
@@ -23,8 +23,6 @@
 
         /** The base API URL. */
         public  static  readonly    BASE_API_URL                :string             = 'https://pdf.catalano.de/api/';
-        /** The base64 encoded basic authorization token. */
-        public  static  readonly    BASIC_AUTH_TOKEN            :string             = btoa( 'pdf' + ':' + 'pdf2SearchEngine' );
 
         /** Debug constant search phrase string. */
         public  static  readonly    DEBUG_TEST_SEARCH_STRING    :string             = 'management';

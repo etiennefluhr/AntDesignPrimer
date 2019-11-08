@@ -2,7 +2,6 @@
     import * as gp    from '../..';
     import * as React from 'react';
     import * as antd  from 'antd';
-    import TweenOne   from 'rc-tween-one';
 
     /*******************************************************************************************************************
     *   The React state for the Website component.
@@ -13,8 +12,6 @@
         currentMenuItem :gp.MenuItem;
         /** Determines if the Sider is currently collapsed. */
         collapsedSider  :boolean;
-        /** The target menu item to change to. */
-        targetMenuItem  :gp.MenuItem;
     }
 
     /*******************************************************************************************************************
@@ -34,7 +31,6 @@
             this.state = {
                 currentMenuItem: gp.MenuItem.SEARCH_PDF,
                 collapsedSider:  false,
-                targetMenuItem:  null,
             };
         }
 
@@ -49,12 +45,10 @@
 
             return <antd.Layout className="mainLayout">
 
-                <TweenOne animation={ gp.Animation.INIT_SHOW_MENU }>
-                    <gp.Menu
-                        onChangeMenu={    ( key:gp.MenuItem   ) :void => { this.onChangeMenu( key );          } }
-                        onCollapseSider={ ( collapsed:boolean ) :void => { this.onCollapseSider( collapsed ); } }
-                    />
-                </TweenOne>
+                <gp.Menu
+                    onChangeMenu={    ( key:gp.MenuItem   ) :void => { this.onChangeMenu( key );          } }
+                    onCollapseSider={ ( collapsed:boolean ) :void => { this.onCollapseSider( collapsed ); } }
+                />
 
                 <antd.Layout
                     className={
@@ -66,38 +60,17 @@
                     }
                 >
 
-                    <TweenOne animation={ gp.Animation.INIT_SHOW_HEADER }>
-                        <antd.Layout.Header className="mainHeader">
-                            PDF Search Engine Frontend
-                        </antd.Layout.Header>
-                    </TweenOne>
+                    <antd.Layout.Header className="mainHeader">
+                        PDF Search Engine Frontend
+                    </antd.Layout.Header>
 
-                    <TweenOne
-                        animation={
+                    <gp.Content
+                        currentSite={ this.state.currentMenuItem }
+                    />
 
-                            // TODO extract to method getContentLayoutAnimation()
-                            this.state.targetMenuItem === null
-                            ? gp.Animation.INIT_SHOW_CONTENT
-                            : this.state.targetMenuItem !== this.state.currentMenuItem
-                                ? {
-                                    ...gp.Animation.HIDE_CONTENT,
-                                    onComplete: ( e:any ) :void => {
-                                        this.onContentLayoutFadeOutCompleted();
-                                    },
-                                }
-                                : gp.Animation.SHOW_CONTENT
-                        }
-                    >
-                        <gp.Content
-                            currentSite={ this.state.currentMenuItem }
-                        />
-                    </TweenOne>
-
-                    <TweenOne animation={ gp.Animation.INIT_SHOW_FOOTER }>
-                        <antd.Layout.Footer className="mainFooter">
-                            &copy; 2019 Mayflower GmbH
-                        </antd.Layout.Footer>
-                    </TweenOne>
+                    <antd.Layout.Footer className="mainFooter">
+                        &copy; 2019 Mayflower GmbH
+                    </antd.Layout.Footer>
 
                 </antd.Layout>
 
@@ -116,9 +89,8 @@
 
             this.setState(
                 {
-                    currentMenuItem: this.state.currentMenuItem,
+                    currentMenuItem: key,
                     collapsedSider:  this.state.collapsedSider,
-                    targetMenuItem:  key,
                 }
             );
         }
@@ -138,25 +110,6 @@
 
                     currentMenuItem: this.state.currentMenuItem,
                     collapsedSider:  collapsed,
-                    targetMenuItem:  this.state.targetMenuItem,
-                }
-            );
-        }
-
-        /***************************************************************************************************************
-        *   Being invoked when the content layout has completed fading out.
-        ***************************************************************************************************************/
-        private onContentLayoutFadeOutCompleted() : void
-        {
-            gp.Debug.major.log( 'onContentLayoutFadeOutCompleted being invoked' );
-
-            this.setState(
-                {
-                    // TODO to ...this.state,
-
-                    currentMenuItem: this.state.targetMenuItem,
-                    collapsedSider:  this.state.collapsedSider,
-                    targetMenuItem:  this.state.targetMenuItem,
                 }
             );
         }

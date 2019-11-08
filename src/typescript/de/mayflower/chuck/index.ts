@@ -12,7 +12,6 @@
     export * from './networking/dto/response/SearchGroupResponse';
     export * from './networking/dto/response/SearchMatchResponse';
 
-    export * from './site/Animation';
     export * from './site/MenuItem';
 
     export * from './site/component/Content';

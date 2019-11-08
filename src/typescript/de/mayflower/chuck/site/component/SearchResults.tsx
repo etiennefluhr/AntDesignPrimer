@@ -51,16 +51,7 @@
                 const hit:any = hits[ i ];
 
                 items.push(
-
-                    <TweenOne
-                        key={ i }
-                        animation={ gp.Animation.TEST_TIMELINE }
-                        yoyo={ false }
-                    >
-
-                        { this.createSearchResult( hit ) }
-
-                    </TweenOne>
+                    this.createSearchResult( hit )
                 );
             }
 

@@ -29,7 +29,6 @@
             const headers:Headers = new Headers();
 
             headers.append( 'Accept',        'application/json'                     );
-            headers.append( 'Authorization', 'Basic ' + gp.Setting.BASIC_AUTH_TOKEN );
             headers.append( 'Content-Type',  'application/json'                     );
 
             fetch
