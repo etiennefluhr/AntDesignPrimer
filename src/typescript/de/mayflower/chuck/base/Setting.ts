@@ -5,8 +5,10 @@
     // tslint:disable:max-line-length
     export class Setting
     {
-        /** The application's internal name. */
-        public  static  readonly    TITLE                       :string             = 'GsapPrimer, (c) 2019 Mayflower GmbH, v.0.0.1';
+        /** The name of the application. */
+        public  static  readonly    TITLE                       :string             = 'Ant Design meets The International Chuck Norris Database';
+        /** The copyright information. */
+        public  static  readonly    COPYRIGHT                   :string             = '(c) 2019 Mayflower GmbH, v.1.0';
 
         /** The global debug switch. */
         public  static  readonly    DEBUG_MODE                  :boolean            = true;

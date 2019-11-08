@@ -26,7 +26,7 @@
             document.title = gp.Setting.TITLE;
 
             // acclaim debug console
-            gp.Debug.major.log( gp.Setting.TITLE );
+            gp.Debug.major.log( gp.Setting.TITLE + ', ' + gp.Setting.COPYRIGHT );
             gp.Debug.major.log();
 
             // add container div

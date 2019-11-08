@@ -61,7 +61,7 @@
                 >
 
                     <antd.Layout.Header className="mainHeader">
-                        PDF Search Engine Frontend
+                        { gp.Setting.TITLE }
                     </antd.Layout.Header>
 
                     <gp.Content
@@ -69,7 +69,7 @@
                     />
 
                     <antd.Layout.Footer className="mainFooter">
-                        &copy; 2019 Mayflower GmbH
+                        { gp.Setting.COPYRIGHT }
                     </antd.Layout.Footer>
 
                 </antd.Layout>
