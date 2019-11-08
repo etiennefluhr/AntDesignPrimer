@@ -1,8 +1,8 @@
 # Ant Design Primer
 
-![Ant Design](_ASSET/readme/logo_ant_design.png)
-
 Hach ich komme aus dem Schwärmen für diese geniale React-Komponentenbibliothek einfach nicht mehr heraus. Ant Design bietet eine vollständige Palette an reaktiven Enterprise UI-Komponenten allererster Güte und ermöglicht darüberhinaus die schnelle Realisierung kompletter, moderner und responsiver Web-Frontends ohne dafür eine einzige Zeile HTML oder CSS Code schreiben zu müssen.
+
+![Ant Design](_ASSET/readme/logo_ant_design.png)
 
 ## Tech Stack
 - TypeScript 3.4.5
@@ -19,13 +19,18 @@ Hach ich komme aus dem Schwärmen für diese geniale React-Komponentenbibliothek
 
 ## Ant Design meets the International Chuck Norris Database
 
+Wir wollen uns den praktischen Einsatz von TypeScript und React anhand dieser Bibliothek gemeinsam ansehen und ein minimales Web-Frontend damit erstellen. Als Backend bietet sich die International Chuck Norris Database an, eine simple REST-API die wir mit der JavaScript Fetch API ansprechen können und die uns mit unendlich vielen Chuck Norris Witzen versorgt. Beispielsweise liefert hier ein simpler GET-Request auf http://api.icndb.com/jokes/random einen entsprechenden Response Body im JSON Format zurück, den wir anschließend parsen und in unserem Frontend anzeigen können:
+
 ![The International Chuck Norris Database](_ASSET/readme/icndb.png)
 
-Wir wollen uns den praktischen Einsatz von TypeScript und React anhand dieser Bibliothek gemeinsam ansehen und ein minimales Web-Frontend damit erstellen. Als Backend bietet sich die International Chuck Norris Database an, eine simple REST-API die wir mit der JavaScript Fetch API ansprechen können und die uns mit unendlich vielen Chuck Norris Witzen versorgt. Beispielsweise liefert hier ein simpler GET-Request auf http://api.icndb.com/jokes/random einen entsprechenden Response Body im JSON Format zurück, den wir anschließend parsen und in unserem Frontend anzeigen können:
 ```
 {
     "type": "success", 
-    "value": { "id": 478, "joke": "Chuck Norris can instantiate an abstract class.", "categories": ["nerdy"] }
+    "value": { 
+        "id": 478, 
+        "joke": "Chuck Norris can instantiate an abstract class.", 
+        "categories": ["nerdy"] 
+    }
 }
 ```
 Der gesamte JavaScript Quellcode ist mittels des Transpilers TypeScript in dieser Syntax verfasst und harmoniert hervorragend mit dem React Framework. Außerdem vereint der Tech Stack den Einsatz des Bundlers Webpack und des CSS-Präprozessors Less, mit dessen Hilfe Stylesheet-Angaben sehr gut strukturiert und ohne Redundanzen definiert werden können. Abgerundet wird das Projekt durch Jest - das Testframework für React Komponenten bei dem auch die Code Coverage per Design aus der Tüte fällt. Zudem weist uns der TypeScript Linter TSLint auf Verletzungen unseres festgelegten Coding Styles hin und wir können mit dem npm Paket TypeDoc eine HTML-Dokumentation für all unsere TypeScript-Klassen generieren.
@@ -34,7 +39,7 @@ Der gesamte JavaScript Quellcode ist mittels des Transpilers TypeScript in diese
 
 ## Primal npm targets
 
---- LOGO TYPESCRIPT ---
+![TypeScript](_ASSET/readme/logo_typescript.png)
 
 ### Compile TypeScript to JavaScript
 `npm run typescript:compile`
@@ -42,7 +47,7 @@ Der gesamte JavaScript Quellcode ist mittels des Transpilers TypeScript in diese
 Compiles all TypeScript sources from `/src` to JavaScript unter `/bin`.
 All TypeScript compiler settings reside in `/tsconfig.json`.
 
---- LOGO WEBPACK ---
+![Webpack](_ASSET/readme/logo_webpack.png)
 
 ### Run Webpack in development mode
 `npm run webpack:dev`
@@ -68,14 +73,14 @@ Find the created site in your browser on
 http://localhost:5000/
 ```
 
---- LOGO TypeDoc ---
+![TypeDoc](_ASSET/readme/logo_typedoc.png)
 
 ### Generate TypeDoc
 `npm run typedoc:generate`
 
 Generates a HTML documentation at `/doc` for all TypeScript sources under `/src/typescript`.
 
---- LOGO TSLint ---
+![TSLint](_ASSET/readme/logo_tslint.png)
 
 ### Run TSLint
 `npm run tslint:check`
@@ -83,7 +88,7 @@ Generates a HTML documentation at `/doc` for all TypeScript sources under `/src/
 Runs the TypeScript Linter on all TypeScript sources under `/src`.
 Linter Settings reside in `/tslint.json`.
 
---- LOGO Mocha ---
+![Mocha](_ASSET/readme/logo_mocha.png)
 
 ### Run all Tests with Mocha
 `npm run test:all`
@@ -91,7 +96,7 @@ Linter Settings reside in `/tslint.json`.
 Invoke the Mocha Test runner to run all defined Tests in TypeScript files under `/src/test` .
 The configuration comes as parameters of the command.
 
---- LOGO Jest ---
+![Jest](_ASSET/readme/logo_jest.png)
 
 ### Run all Tests with Jest
 `npm run test:jest`
