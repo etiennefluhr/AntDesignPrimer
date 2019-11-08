@@ -6,7 +6,6 @@ module.exports = ( env, argv ) => {
             filename: 'bundle.js',
             path: __dirname + '/dist/js/'
         },
-
         resolve: {
             // add '.ts' and '.tsx' as resolvable extensions.
             extensions: [

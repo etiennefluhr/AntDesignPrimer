@@ -120,7 +120,7 @@ Die Konfiguration für den Testrunner wird als Parameter im Anschluß an den Bef
 Ruft den Jest Test Runner auf der alle definierten Tests in TypeScript Dateien unterhalb `/src/test` ausführt, 
 die über die Endung `.test.ts(x)` verfügen.
 
-Die The Konfiguration befindet sich in der `/package.json` im Abschnitt `jest`.
+Die Konfiguration für Jest befindet sich in der `/package.json` im Abschnitt `jest`.
 
 ### Alle TypeScript Tests mit Jest aufrufen und Code Coverage generieren
 `npm run test:jest-coverage`
