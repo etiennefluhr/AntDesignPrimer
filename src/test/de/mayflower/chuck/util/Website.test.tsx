@@ -15,10 +15,10 @@
         {
             chai.expect( wrapper.length ).to.equal( 1 );
         });
-
+/*
         it( 'assign the property "elementID"', () =>
         {
             chai.expect( demoElement.props.elementID ).to.equal( 'DemoElement1' );
         });
-
+*/
     });
