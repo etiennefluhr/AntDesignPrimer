@@ -1,6 +1,9 @@
 # Ant Design Primer
 
-Hach ich komme aus dem Schwärmen für diese geniale React-Komponentenbibliothek einfach nicht mehr heraus. Ant Design bietet eine vollständige Palette an reaktiven Enterprise UI-Komponenten allererster Güte und ermöglicht darüberhinaus die schnelle Realisierung kompletter, moderner und responsiver Web-Frontends ohne dafür eine einzige Zeile HTML oder CSS Code schreiben zu müssen.
+Hach ich komme aus dem Schwärmen für diese geniale React-Komponentenbibliothek einfach nicht 
+ mehr heraus. Ant Design bietet eine vollständige Palette an reaktiven Enterprise UI-Komponenten
+ allererster Güte und ermöglicht darüberhinaus die schnelle Realisierung kompletter, moderner und
+ responsiver Web-Frontends ohne dafür eine einzige Zeile HTML oder CSS Code schreiben zu müssen.
 
 ![Ant Design](_ASSET/readme/150px/logo_ant_design.png)
 
@@ -19,7 +22,12 @@ Hach ich komme aus dem Schwärmen für diese geniale React-Komponentenbibliothek
 
 ## The International Chuck Norris Database
 
-Wir wollen uns den praktischen Einsatz von TypeScript und React anhand dieser Bibliothek gemeinsam ansehen und ein minimales Web-Frontend damit erstellen. Als Backend bietet sich die International Chuck Norris Database an, eine simple REST-API die wir mit der JavaScript Fetch API ansprechen können und die uns mit unendlich vielen Chuck Norris Witzen versorgt. Beispielsweise liefert hier ein simpler GET-Request auf http://api.icndb.com/jokes/random einen entsprechenden Response Body im JSON Format zurück, den wir anschließend parsen und in unserem Frontend anzeigen können:
+Wir wollen uns den praktischen Einsatz von TypeScript und React anhand dieser Bibliothek gemeinsam
+ ansehen und ein minimales Web-Frontend damit erstellen. Als Backend bietet sich die International
+ Chuck Norris Database an, eine simple REST-API die wir mit der JavaScript Fetch API ansprechen können
+ und die uns mit unendlich vielen Chuck Norris Witzen versorgt. Beispielsweise liefert hier ein
+ simpler GET-Request auf http://api.icndb.com/jokes/random einen entsprechenden Response Body im 
+ JSON Format zurück, den wir anschließend parsen und in unserem Frontend anzeigen können:
 
 ![The International Chuck Norris Database](_ASSET/readme/150px/icndb.png)
 
@@ -36,56 +44,65 @@ Wir wollen uns den praktischen Einsatz von TypeScript und React anhand dieser Bi
 
 <hr>
 
-## Primal npm targets
+## npm targets
 
 ![TypeScript](_ASSET/readme/150px/logo_typescript.png)
 
-### Compile TypeScript to JavaScript
+### TypeScript nach JavaScript kompilieren
 `npm run typescript:compile`
 
-Compiles all TypeScript sources from `/src` to JavaScript unter `/bin`.
-All TypeScript compiler settings reside in `/tsconfig.json`.
+Kompiliert alle TypeScript Quellcodes von `/src` nach JavaScript unter `/bin`.
+ Die Einstellungen für den TypeScript Compiler befinden sich unter `/tsconfig.json`.
 
 ![Webpack](_ASSET/readme/150px/logo_webpack.png)
 
-### Run Webpack in development mode
+### Webpack in development ausführen
 `npm run webpack:dev`
 
-Compiles all TypeScript sources from `/src` to JavaScript under `/bin` and bundles these internal sources together with all external library sources to `dist/js/bundle.js`.
-All Webpack bundler settings reside in `/webpack.config.js`.
+Gleiches Verhalten wie Target `typescript:compile`. Darübehinaus werden alle internen
+ kompilierten JavaScript Dateien unter `/bin` mit allen externen JavaScript Quellcodes 
+ der verwendeten Bibliotheken zusammengefügt und unter `dist/js/bundle.js` vereint.
 
-### Run Webpack in production mode
+Nach dem erfolgreichen Abschluss dieses Targets kann das fertige Frontend unter 
+ `dist/index.html` betrieben oder deployed werden.
+
+Alle Einstellungen für Webpack siedeln in der `/webpack.config.js` an.
+
+### Webpack in production ausführen
 `npm run webpack:production`
 
-Same as target `webpack:development` but compilation in `dist/js/bundle.js` is minified and obfuscated.
+Gleiches Verhalten wie das target `webpack:development` nur dass das Kompilat unter
+ `dist/js/bundle.js` minifiziert und obfuskiert wird.
 
-### Run the Webpack Dev Server
+### Den Webpack Dev Server starten
 `npm run webpack:devserver`
 
-Same as target `webpack:development` but no output to `bin` or `dist/js/bundle.js` occurs on disk.
-Instead, the resource `dist/js/bundle.js` is served virtually and the folder `/dist` is mounted in the Webpack Dev Server.
+Gleiches Verhalten wie das Target `webpack:development` es wird allerdings kein Output unter
+ `bin` oder `dist/js/bundle.js` erstellt. Stattdessen wird die Resource `dist/js/bundle.js`
+ virtuell für den Webpack Dev Server zur Verfügung gestellt und der gesamte Ordner `/dist`
+ in den Webpack Dev Server gemountet.
 
-All Webpack Dev Server settings reside in `/webpack.config.js` in section `config.devServer`.
+Die in den Webpack Dev Server gemountete Frontend Anwendung kann im Browser eingesehen werden
+ unter `http://localhost:5000/`
 
-Find the created site in your browser on
-```
-http://localhost:5000/
-```
+Alle Einstellungen für den Webpack Dev Server befinden sich in der `/webpack.config.js`
+ im Abschnitt `config.devServer`.
 
 ![TypeDoc](_ASSET/readme/150px/logo_typedoc.png)
 
-### Generate TypeDoc
+### TypeDoc generieren
 `npm run typedoc:generate`
 
-Generates a HTML documentation at `/doc` for all TypeScript sources under `/src/typescript`.
+Generiert eine HTML Dokumentation unter `/doc` für alle TypeScript Quellcodes unter `/src/typescript`.
 
 ![TSLint](_ASSET/readme/150px/logo_tslint.png)
 
-### Run TSLint
+### TSLint ausführen
 `npm run tslint:check`
 
-Runs the TypeScript Linter on all TypeScript sources under `/src`.
-Linter Settings reside in `/tslint.json`.
+Führt den TypeScript Linter für alle Quellcodes unter `/src` aus.
+
+Einstellungen für den Linter befinden sich unter `/tslint.json`.
 
 ![Mocha](_ASSET/readme/150px/logo_mocha.png)
 
