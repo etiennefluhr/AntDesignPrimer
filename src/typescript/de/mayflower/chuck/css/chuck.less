@@ -1,12 +1,17 @@
 
-    // Ant Design less
+    // Ant Design include
     @import '~antd/dist/antd.less';
 
+    // custom primal colors
+    @color-primal-contrast:         #e35205;
+    @color-primal-dark:             #001529;
+    @color-primal-medium:           #c7c7c7;
+    @color-primal-light:            #f0f2f5;
+
     // Ant Design overrides
-    @primary-color:                 #e35205;
-/*
-    // layout
-    @layout-header-background:      @primary-color;
-    @layout-body-background:        #ffffff;
-    @layout-footer-background:      @primary-color;
-*/
+    @primary-color:                 @color-primal-contrast;
+    @layout-sider-background:       @color-primal-dark;
+    @menu-dark-bg:                  @color-primal-dark;
+    @layout-header-background:      @color-primal-medium;
+    @layout-footer-background:      @color-primal-medium;
+    @layout-body-background:        @color-primal-light;
