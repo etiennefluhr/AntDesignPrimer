@@ -37,7 +37,7 @@
             super( props );
 
             this.state = {
-                currentSearchTerm:    gp.Setting.DEBUG_TEST_SEARCH_STRING,
+                currentSearchTerm:    'management',
                 currentSearchCats:    [],
                 searchGroups:         [],
                 searchResults:        null,
@@ -265,7 +265,7 @@
             gp.Debug.network.log( 'Search term is [' + searchTerm + ']' );
 
             // request API for strings from three chars on
-            if ( searchTerm.length >= gp.Setting.MIN_SUBMIT_STRING_LENGTH )
+            if ( searchTerm.length >= 3 )
             {
                 gp.Debug.network.log( 'Search submitted for: [' + searchTerm + ']' );
                 gp.Debug.network.log( 'Searching in [' + this.state.currentSearchCats.length + '] categories ' );

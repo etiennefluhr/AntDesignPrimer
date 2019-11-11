@@ -44,7 +44,7 @@
         {
             switch ( this.props.currentSite )
             {
-                case gp.MenuItem.SEARCH_PDF:
+                case gp.MenuItem.RANDOM_JOKE:
                 {
                     return <gp.SearchPdf />;
                 }

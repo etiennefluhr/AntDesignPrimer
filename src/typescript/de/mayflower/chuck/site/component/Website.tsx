@@ -1,5 +1,6 @@
 
     import * as gp    from '../..';
+    import { Menu }   from '../..';
     import * as React from 'react';
     import * as antd  from 'antd';
 
@@ -27,7 +28,7 @@
             super( props );
 
             this.state = {
-                currentMenuItem: gp.MenuItem.SEARCH_PDF,
+                currentMenuItem: gp.MenuItem.RANDOM_JOKE,
             };
         }
 
@@ -42,23 +43,19 @@
 
             return <antd.Layout>
 
-                <gp.Menu
-                    onChangeMenu={    ( key:gp.MenuItem   ) :void => { this.onChangeMenu( key );          } }
+                <Menu
+                    onChangeMenu={ ( key:gp.MenuItem ) :void => { this.onChangeMenu( key ); } }
                 />
 
                 <antd.Layout>
 
-                    <antd.Layout.Header>
-                        { gp.Setting.TITLE }
-                    </antd.Layout.Header>
+                    <antd.Layout.Header>{ gp.Setting.TITLE }</antd.Layout.Header>
 
                     <gp.Content
                         currentSite={ this.state.currentMenuItem }
                     />
 
-                    <antd.Layout.Footer>
-                        { gp.Setting.COPYRIGHT }
-                    </antd.Layout.Footer>
+                    <antd.Layout.Footer>{ gp.Setting.COPYRIGHT }</antd.Layout.Footer>
 
                 </antd.Layout>
 

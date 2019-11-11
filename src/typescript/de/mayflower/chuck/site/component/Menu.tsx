@@ -28,24 +28,24 @@
             gp.Debug.react.log( 'Menu.render() being invoked' );
 
             return <antd.Layout.Sider
-                    className="mainSider"
                     breakpoint="lg"
                     collapsedWidth="0"
-                    theme="light"
+                    theme="dark"
+                    style={ { height: '100vh', } }
                 >
 
                 <div className="logo" />
 
                 <antd.Menu
-                    theme="light"
+                    theme="dark"
                     mode="inline"
-                    defaultSelectedKeys={ [ gp.MenuItem.SEARCH_PDF ] }
+                    defaultSelectedKeys={ [ gp.MenuItem.RANDOM_JOKE ] }
                     onSelect={ ( param:SelectParam ) :void => { this.props.onChangeMenu( param.key as gp.MenuItem ); } }
                 >
 
-                    <antd.Menu.Item key={ gp.MenuItem.SEARCH_PDF }>
+                    <antd.Menu.Item key={ gp.MenuItem.RANDOM_JOKE }>
                         <antd.Icon type="user" />
-                        <span className="nav-text">{ gp.MenuItem.SEARCH_PDF }</span>
+                        <span className="nav-text">{ gp.MenuItem.RANDOM_JOKE }</span>
                     </antd.Menu.Item>
 
                     <antd.Menu.Item key={ gp.MenuItem.DOWNLOAD }>
