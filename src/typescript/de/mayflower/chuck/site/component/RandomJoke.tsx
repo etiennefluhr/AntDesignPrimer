@@ -1,7 +1,8 @@
 
-    import * as gp    from '../..';
-    import * as React from 'react';
-    import * as antd  from 'antd';
+    import { SearchResults } from '../..';
+    import * as gp           from '../..';
+    import * as React        from 'react';
+    import * as antd         from 'antd';
 
     /*******************************************************************************************************************
     *   The React state for the RandomJoke component.
@@ -10,8 +11,6 @@
     {
         /** Current search term inserted in AutoComplete search field. */
         currentSearchTerm    :string;
-        /** Current search categories composed in SearchCategory multiselect field. */
-        currentSearchCats    :string[];
 
         /** All search groups to display in this component. */
         searchGroups         :gp.SearchGroupResponse[];
@@ -38,7 +37,6 @@
 
             this.state = {
                 currentSearchTerm:    'management',
-                currentSearchCats:    [],
                 searchGroups:         [],
                 searchResults:        null,
                 loadingSearchResults: false,
@@ -64,132 +62,24 @@
         {
             gp.Debug.react.log( 'RandomJoke.render() being invoked' );
 
-            return this.createSearchPdf();
-        }
-
-        /***************************************************************************************************************
-        *   Creates the main content page for the 'PDF Search'.
-        *
-        *   @return The constructed JSX element.
-        ***************************************************************************************************************/
-        private createSearchPdf() : JSX.Element
-        {
-            const categorySelectField :JSX.Element = this.createCategorySelectField();
-            const searchTermField     :JSX.Element = this.createSearchTermField();
-
             return <div>
 
-                <div className="mainContentContainer">
+                <div>
 
-                    <p>Your search term:</p>
-                    { searchTermField }
-
-                    <p />
-
-                    <p>Categories to search for results:</p>
-                    { categorySelectField }
+                    <antd.Button
+                        type="primary"
+                        onClick={ ( me: React.MouseEvent ) :void => { this.onClickJokeButton(); } }
+                    >
+                        Get a Random Joke
+                    </antd.Button>
 
                 </div>
 
-                <gp.SearchResults
+                <SearchResults
                     searchResults={ this.state.searchResults }
                 />
 
             </div>;
-        }
-
-        /***************************************************************************************************************
-        *   Creates the Ant Design multi Selector field for the categories to search in.
-        *
-        *   @return The constructed JSX element.
-        ***************************************************************************************************************/
-        private createCategorySelectField() : JSX.Element
-        {
-            const options:JSX.Element[] = [];
-            for ( let i:number = 0; i < this.state.searchGroups.length; ++i ) {
-                options.push(
-                    <antd.Select.Option key={ i }>{ this.state.searchGroups[ i ].docType }</antd.Select.Option>
-                );
-            }
-
-            return <antd.Select
-                mode="multiple"
-                className="searchCategorySelectField"
-                placeholder="Select your Search Category"
-                defaultValue={ this.state.currentSearchCats }
-                onChange={
-                    ( categories:string[] ) :void => {
-                        gp.Debug.major.log( 'onChange search categories being invoked' );
-
-                        this.changeCurrentSearchCategories( categories );
-                    }
-                }
-            >
-
-                { options }
-
-            </antd.Select>;
-        }
-
-        /***************************************************************************************************************
-        *   Creates the Ant Design auto complete field.
-        *
-        *   @return The constructed JSX element.
-        ***************************************************************************************************************/
-        private createSearchTermField() : JSX.Element
-        {
-            return <antd.AutoComplete
-                    className="autoCompleteSearchField"
-                    size="large"
-                    placeholder="input here"
-                    optionLabelProp="text"
-                    defaultValue={ this.state.currentSearchTerm }
-                    disabled={ this.state.loadingSearchResults }
-                    onSelect={
-                        ( test:any ) :void => {
-                            gp.Debug.major.log( 'AutoComplete onSelect ..' );
-                        }
-                    }
-                    onSearch={
-                        ( searchTerm:string ) :void => {
-                            gp.Debug.major.log( 'onSearch() being invoked with term [' + searchTerm + ']' );
-
-                            this.changeCurrentSearchTerm( searchTerm );
-                        }
-                    }
-                >
-
-                <antd.Input
-                    suffix={
-                        <antd.Button
-                            className="autoCompleteSearchFieldSearchButton"
-                            size="large"
-                            type="primary"
-                            disabled={ this.state.loadingSearchResults }
-                            onClick={
-                                ( mouseEvent:React.MouseEvent ) :void => {
-                                    gp.Debug.major.log( 'Submitted search via search button' );
-
-                                    this.submitSearch();
-                                }
-                            }
-                        >
-                            <antd.Icon
-                                type={ this.state.loadingSearchResults ? 'loading' : 'search' }
-                            />
-                        </antd.Button>
-                    }
-                    disabled={ this.state.loadingSearchResults }
-                    onPressEnter={
-                        ( event:React.KeyboardEvent ) :void => {
-                            gp.Debug.major.log( 'Submitted search via enter press' );
-
-                            this.submitSearch();
-                        }
-                    }
-                />
-
-            </antd.AutoComplete>
         }
 
         /***************************************************************************************************************
@@ -204,22 +94,6 @@
                     ...this.state,
 
                     currentSearchTerm: searchTerm,
-                }
-            );
-        }
-
-        /***************************************************************************************************************
-        *   Being invoked when the value of the 'search categories' field is changed.
-        *
-        *   @param categories The new search categories to assign.
-        ***************************************************************************************************************/
-        private changeCurrentSearchCategories( categories:string[] ) : void
-        {
-            this.setState(
-                {
-                    ...this.state,
-
-                    currentSearchCats: categories,
                 }
             );
         }
@@ -268,7 +142,6 @@
             if ( searchTerm.length >= 3 )
             {
                 gp.Debug.network.log( 'Search submitted for: [' + searchTerm + ']' );
-                gp.Debug.network.log( 'Searching in [' + this.state.currentSearchCats.length + '] categories ' );
 
                 // prune all current search results
                 this.setState(
@@ -308,5 +181,15 @@
                     loadingSearchResults: false,
                 }
             );
+        }
+
+        /***************************************************************************************************************
+        *   Being invoked when the 'Get Random Joke' button is clicked.
+        ***************************************************************************************************************/
+        private onClickJokeButton() : void
+        {
+            gp.Debug.major.log( 'Button "Get a Joke" clicked.' );
+
+
         }
     }

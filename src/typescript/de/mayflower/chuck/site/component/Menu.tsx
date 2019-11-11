@@ -1,7 +1,7 @@
 
-    import * as gp    from '../..';
-    import * as React from 'react';
-    import * as antd from 'antd';
+    import * as gp         from '../..';
+    import * as React      from 'react';
+    import * as antd       from 'antd';
     import { SelectParam } from 'antd/lib/menu';
 
     /*******************************************************************************************************************
@@ -45,22 +45,22 @@
 
                     <antd.Menu.Item key={ gp.MenuItem.RANDOM_JOKE }>
                         <antd.Icon type="user" />
-                        <span className="nav-text">{ gp.MenuItem.RANDOM_JOKE }</span>
+                        <span>{ gp.MenuItem.RANDOM_JOKE }</span>
                     </antd.Menu.Item>
 
                     <antd.Menu.Item key={ gp.MenuItem.DOWNLOAD }>
                         <antd.Icon type="video-camera" />
-                        <span className="nav-text">{ gp.MenuItem.DOWNLOAD }</span>
+                        <span>{ gp.MenuItem.DOWNLOAD }</span>
                     </antd.Menu.Item>
 
                     <antd.Menu.Item key={ gp.MenuItem.ABOUT }>
                         <antd.Icon type="upload" />
-                        <span className="nav-text">{ gp.MenuItem.ABOUT }</span>
+                        <span>{ gp.MenuItem.ABOUT }</span>
                     </antd.Menu.Item>
 
                     <antd.Menu.Item key={ gp.MenuItem.GO_PREMIUM }>
                         <antd.Icon type="user" />
-                        <span className="nav-text">{ gp.MenuItem.GO_PREMIUM }</span>
+                        <span>{ gp.MenuItem.GO_PREMIUM }</span>
                     </antd.Menu.Item>
 
                     <antd.Menu.SubMenu

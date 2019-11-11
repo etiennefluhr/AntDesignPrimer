@@ -3,7 +3,6 @@
     import * as React from 'react';
     import * as antd  from 'antd';
     import { Meta }   from 'antd/lib/list/Item';
-    import TweenOne   from 'rc-tween-one';
 
     /*******************************************************************************************************************
     *   React properties for the SearchResults component.
@@ -55,7 +54,7 @@
                 );
             }
 
-            return <div className="mainContentContainer">
+            return <div>
 
                 { items }
 
@@ -72,7 +71,6 @@
         private createSearchResult( hit:any ) : JSX.Element
         {
             return <antd.Card
-                className="searchResultCard"
                 cover={
                     <img
                         alt="example"
