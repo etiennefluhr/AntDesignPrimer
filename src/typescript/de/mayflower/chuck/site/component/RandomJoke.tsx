@@ -11,8 +11,6 @@
         /** Current search term inserted in AutoComplete search field. */
         currentSearchTerm    :string;
 
-        /** All search groups to display in this component. */
-        searchGroups         :gp.SearchGroupResponse[];
         /** The search results from the last search response. */
         searchResults        :gp.SearchMatchResponse;
 
@@ -36,7 +34,6 @@
 
             this.state = {
                 currentSearchTerm:    'management',
-                searchGroups:         [],
                 searchResults:        null,
                 loadingSearchResults: false,
             };
@@ -108,7 +105,7 @@
         {
             gp.Debug.major.log( 'Button "Get a Joke" clicked.' );
 
-            requestRandomJoke();
+            this.requestRandomJoke();
         }
 
         /***************************************************************************************************************
