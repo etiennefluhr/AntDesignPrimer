@@ -26,7 +26,7 @@
         {
             gp.Debug.react.log( 'Content.render() being invoked' );
 
-            return <antd.Layout.Content>
+            return <antd.Layout.Content style={ { padding: '30px 50px', } } >
 
                 <div>
                     { this.createContent() }

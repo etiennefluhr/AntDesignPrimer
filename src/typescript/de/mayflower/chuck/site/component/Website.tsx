@@ -1,8 +1,8 @@
 
-    import * as gp    from '../..';
-    import { Menu }   from '../..';
-    import * as React from 'react';
-    import * as antd  from 'antd';
+    import * as gp           from '../..';
+    import { Menu, Content } from '../..';
+    import * as React        from 'react';
+    import * as antd         from 'antd';
 
     /*******************************************************************************************************************
     *   The React state for the Website component.
@@ -51,7 +51,7 @@
 
                     <antd.Layout.Header>{ gp.Setting.TITLE }</antd.Layout.Header>
 
-                    <gp.Content
+                    <Content
                         currentSite={ this.state.currentMenuItem }
                     />
 
