@@ -1,7 +1,8 @@
 
-    import * as gp    from '../..';
-    import * as React from 'react';
-    import * as antd  from 'antd';
+    import { RandomJoke } from '../..';
+    import * as gp        from '../..';
+    import * as React     from 'react';
+    import * as antd      from 'antd';
 
     /*******************************************************************************************************************
     *   React properties for the Content component.
@@ -46,12 +47,12 @@
             {
                 case gp.MenuItem.RANDOM_JOKE:
                 {
-                    return <gp.SearchPdf />;
+                    return <RandomJoke />;
                 }
 
                 default:
                 {
-                    return <div className="mainContentContainer">
+                    return <div>
                         To be defined ..
                     </div>;
                 }

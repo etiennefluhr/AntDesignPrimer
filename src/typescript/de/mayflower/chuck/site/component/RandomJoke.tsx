@@ -4,9 +4,9 @@
     import * as antd  from 'antd';
 
     /*******************************************************************************************************************
-    *   The React state for the SearchPdf component.
+    *   The React state for the RandomJoke component.
     *******************************************************************************************************************/
-    export interface SearchPdfState
+    export interface RandomJokeState
     {
         /** Current search term inserted in AutoComplete search field. */
         currentSearchTerm    :string;
@@ -23,9 +23,9 @@
     }
 
     /*******************************************************************************************************************
-    *   The react component that represents the SearchPdf main content page.
+    *   The react component that represents the RandomJoke main content page.
     *******************************************************************************************************************/
-    export class SearchPdf extends React.Component<any, gp.SearchPdfState>
+    export class RandomJoke extends React.Component<any, gp.RandomJokeState>
     {
         /***************************************************************************************************************
         *   Creates a new Website React component.
@@ -50,7 +50,7 @@
         ***************************************************************************************************************/
         public componentDidMount() : void
         {
-            gp.Debug.react.log( 'SearchPdf.componentDidMount() being invoked' );
+            gp.Debug.react.log( 'RandomJoke.componentDidMount() being invoked' );
 
             this.requestSearchCategories();
         }
@@ -62,7 +62,7 @@
         ***************************************************************************************************************/
         public render() : JSX.Element
         {
-            gp.Debug.react.log( 'SearchPdf.render() being invoked' );
+            gp.Debug.react.log( 'RandomJoke.render() being invoked' );
 
             return this.createSearchPdf();
         }
