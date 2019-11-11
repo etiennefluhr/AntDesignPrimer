@@ -17,7 +17,6 @@
     export * from './site/component/Content';
     export * from './site/component/Menu';
     export * from './site/component/RandomJoke';
-    export * from './site/component/SearchResults';
     export * from './site/component/Website';
 
     export * from './util/String';

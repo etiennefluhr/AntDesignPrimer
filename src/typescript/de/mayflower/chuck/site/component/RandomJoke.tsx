@@ -1,8 +1,7 @@
 
-    import { SearchResults } from '../..';
-    import * as gp           from '../..';
-    import * as React        from 'react';
-    import * as antd         from 'antd';
+    import * as gp    from '../..';
+    import * as React from 'react';
+    import * as antd  from 'antd';
 
     /*******************************************************************************************************************
     *   The React state for the RandomJoke component.
@@ -50,7 +49,7 @@
         {
             gp.Debug.react.log( 'RandomJoke.componentDidMount() being invoked' );
 
-            this.requestSearchCategories();
+            this.requestRandomJoke();
         }
 
         /***************************************************************************************************************
@@ -74,58 +73,54 @@
                     </antd.Button>
 
                 </div>
-
+{ /*
                 <SearchResults
                     searchResults={ this.state.searchResults }
                 />
-
+*/ }
             </div>;
         }
 
         /***************************************************************************************************************
-        *   Being invoked when the value of the 'search term' field is changed.
+        *   Being invoked when the submit search data arrived.
         *
-        *   @param searchTerm The new search term to assign.
+        *   @param data The received searchMatch data model.
         ***************************************************************************************************************/
-        private changeCurrentSearchTerm( searchTerm:string ) : void
+        private searchSubmitDataArrived( data:gp.SearchMatchResponse ) : void
         {
-            this.setState(
-                {
-                    ...this.state,
-
-                    currentSearchTerm: searchTerm,
-                }
-            );
-        }
-
-        /***************************************************************************************************************
-        *   Being invoked when the 'Request Search Categories' button is clicked.
-        ***************************************************************************************************************/
-        private requestSearchCategories() : void
-        {
-            gp.Debug.network.log( 'Clicked "Request Search Categories"' );
-
-            gp.API.getSearchGroups(
-                ( data:gp.SearchGroupResponse[] ) => { this.searchCategoryDataArrived( data ); }
-            );
-        }
-
-        /***************************************************************************************************************
-        *   Being invoked when the group search data arrived.
-        *
-        *   @param searchGroups The received searchGroups.
-        ***************************************************************************************************************/
-        private searchCategoryDataArrived( searchGroups:gp.SearchGroupResponse[] ) : void
-        {
-            gp.Debug.network.log( 'received [' + searchGroups.length + '] search groups.' );
+            // gp.Debug.network.log( 'received submitted search data:' );
+            // gp.Debug.network.log( JSON.stringify( data ) );
 
             this.setState(
                 {
                     ...this.state,
 
-                    searchGroups: searchGroups,
+                    searchResults:        data,
+                    loadingSearchResults: false,
                 }
             );
+        }
+
+        /***************************************************************************************************************
+        *   Being invoked when the 'Get Random Joke' button is clicked.
+        ***************************************************************************************************************/
+        private onClickJokeButton() : void
+        {
+            gp.Debug.major.log( 'Button "Get a Joke" clicked.' );
+
+            requestRandomJoke();
+        }
+
+        /***************************************************************************************************************
+        *   Requests a new random joke.
+        ***************************************************************************************************************/
+        private requestRandomJoke() : void
+        {
+            gp.Debug.major.log( 'requestRandomJoke() being invoked.' );
+
+
+
+
         }
 
         /***************************************************************************************************************
@@ -161,35 +156,5 @@
                     }
                 );
             }
-        }
-
-        /***************************************************************************************************************
-        *   Being invoked when the submit search data arrived.
-        *
-        *   @param data The received searchMatch data model.
-        ***************************************************************************************************************/
-        private searchSubmitDataArrived( data:gp.SearchMatchResponse ) : void
-        {
-            // gp.Debug.network.log( 'received submitted search data:' );
-            // gp.Debug.network.log( JSON.stringify( data ) );
-
-            this.setState(
-                {
-                    ...this.state,
-
-                    searchResults:        data,
-                    loadingSearchResults: false,
-                }
-            );
-        }
-
-        /***************************************************************************************************************
-        *   Being invoked when the 'Get Random Joke' button is clicked.
-        ***************************************************************************************************************/
-        private onClickJokeButton() : void
-        {
-            gp.Debug.major.log( 'Button "Get a Joke" clicked.' );
-
-
         }
     }
