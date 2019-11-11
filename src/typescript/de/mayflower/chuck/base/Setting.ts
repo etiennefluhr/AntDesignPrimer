@@ -13,7 +13,7 @@
         /** The global debug switch. */
         public  static  readonly    DEBUG_MODE                  :boolean            = true;
         /** Debug switch to mock ALL http requests, allowing offline mode. */
-        public  static  readonly    DEBUG_MOCK_ALL_REQUESTS     :boolean            = ( true && Setting.DEBUG_MODE );
+        public  static  readonly    DEBUG_MOCK_ALL_REQUESTS     :boolean            = ( false && Setting.DEBUG_MODE );
         /** Debug mocked timeout for API requests in millis. */
         public  static  readonly    DEBUG_MOCK_REQUEST_DELAY    :number             = 1000;
 
@@ -21,5 +21,5 @@
         public  static  readonly    PATH_IMAGE                  :string             = 'res/image/';
 
         /** The base API URL. */
-        public  static  readonly    BASE_API_URL                :string             = 'https://pdf.catalano.de/api/';
+        public  static  readonly    BASE_API_URL                :string             = 'http://api.icndb.com/';
     }

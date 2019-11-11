@@ -8,14 +8,11 @@
     *******************************************************************************************************************/
     export interface RandomJokeState
     {
-        /** Current search term inserted in AutoComplete search field. */
-        currentSearchTerm    :string;
+        /** Indicates that the search results are currently requested from the server. */
+        requestInProgress :boolean;
 
         /** The search results from the last search response. */
-        searchResults        :gp.SearchMatchResponse;
-
-        /** Indicates that the search results are currently requested from the server. */
-        loadingSearchResults :boolean;
+        randomJoke        :gp.RandomJokeResponse;
     }
 
     /*******************************************************************************************************************
@@ -33,9 +30,8 @@
             super( props );
 
             this.state = {
-                currentSearchTerm:    'management',
-                searchResults:        null,
-                loadingSearchResults: false,
+                randomJoke:        null,
+                requestInProgress: false,
             };
         }
 
@@ -65,6 +61,7 @@
                     <antd.Button
                         type="primary"
                         onClick={ ( me: React.MouseEvent ) :void => { this.onClickJokeButton(); } }
+                        loading={ this.state.requestInProgress }
                     >
                         Get a Random Joke
                     </antd.Button>
@@ -72,30 +69,10 @@
                 </div>
 { /*
                 <SearchResults
-                    searchResults={ this.state.searchResults }
+                    randomJoke={ this.state.randomJoke }
                 />
 */ }
             </div>;
-        }
-
-        /***************************************************************************************************************
-        *   Being invoked when the submit search data arrived.
-        *
-        *   @param data The received searchMatch data model.
-        ***************************************************************************************************************/
-        private searchSubmitDataArrived( data:gp.SearchMatchResponse ) : void
-        {
-            // gp.Debug.network.log( 'received submitted search data:' );
-            // gp.Debug.network.log( JSON.stringify( data ) );
-
-            this.setState(
-                {
-                    ...this.state,
-
-                    searchResults:        data,
-                    loadingSearchResults: false,
-                }
-            );
         }
 
         /***************************************************************************************************************
@@ -115,43 +92,33 @@
         {
             gp.Debug.major.log( 'requestRandomJoke() being invoked.' );
 
-
-
-
+            // submit a new search
+            gp.API.getRandomJoke(
+                ( data:gp.RandomJokeResponse ) => {
+                    this.onRandomJokeResponse( data );
+                }
+            );
         }
 
         /***************************************************************************************************************
-        *   Being invoked when the 'Search' field is submitted.
+        *   Being invoked when the random joke data has arrived.
+        *
+        *   @param data The received random joke data model.
         ***************************************************************************************************************/
-        private submitSearch() : void
+        private onRandomJokeResponse( data:gp.RandomJokeResponse ) : void
         {
-            // trim the search term
-            const searchTerm:string = this.state.currentSearchTerm.trim();
+            gp.Debug.network.log( 'received random joke:' );
+            gp.Debug.network.log( JSON.stringify( data ) );
 
-            gp.Debug.network.log( 'Search term is [' + searchTerm + ']' );
+            console.log( data );
 
-            // request API for strings from three chars on
-            if ( searchTerm.length >= 3 )
-            {
-                gp.Debug.network.log( 'Search submitted for: [' + searchTerm + ']' );
+            this.setState(
+                {
+                    // ...this.state,
 
-                // prune all current search results
-                this.setState(
-                    {
-                        ...this.state,
-
-                        searchResults:        null,
-                        loadingSearchResults: true,
-                    }
-                );
-
-                // submit a new search
-                gp.API.postSearchMatch(
-                    searchTerm,
-                    ( data:gp.SearchMatchResponse ) => {
-                        this.searchSubmitDataArrived( data );
-                    }
-                );
-            }
+                    randomJoke:        data,
+                    requestInProgress: false,
+                }
+            );
         }
     }

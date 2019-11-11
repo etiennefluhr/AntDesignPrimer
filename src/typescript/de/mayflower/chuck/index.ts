@@ -4,13 +4,9 @@
     export * from './base/Debug';
 
     export * from './networking/API';
-    export * from './networking/Mock';
     export * from './networking/Networking';
 
-    export * from './networking/dto/request/SearchMatchRequest';
-
-    export * from './networking/dto/response/SearchGroupResponse';
-    export * from './networking/dto/response/SearchMatchResponse';
+    export * from './networking/dto/response/RandomJokeResponse';
 
     export * from './site/MenuItem';
 

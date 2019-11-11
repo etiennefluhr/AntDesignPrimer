@@ -15,6 +15,8 @@
         /***************************************************************************************************************
         *   Performs a HTTP request via the JavaScript fetch API.
         *
+        *   TODO Add onError path!
+        *
         *   @param url       The URL to request.
         *   @param method    The HTTP request method to use.
         *   @param body      The JSON body object to set.
@@ -28,8 +30,8 @@
 
             const headers:Headers = new Headers();
 
-            headers.append( 'Accept',        'application/json'                     );
-            headers.append( 'Content-Type',  'application/json'                     );
+            headers.append( 'Accept',       'application/json' );
+            headers.append( 'Content-Type', 'application/json' );
 
             fetch
             (
@@ -38,9 +40,6 @@
                     method:  method,
                     headers: headers,
                     body:    ( body === null ? null : JSON.stringify( body ) ),
-
-                    // mode:        'no-cors',
-                    // credentials: 'include',
                 }
             )
             .then(
