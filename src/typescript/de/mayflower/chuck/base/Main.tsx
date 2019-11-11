@@ -1,5 +1,6 @@
 
     import * as gp       from '..';
+    import { Website }   from '..';
     import * as React    from 'react';
     import * as ReactDOM from 'react-dom';
 
@@ -34,8 +35,7 @@
             document.body.appendChild( websiteContainer );
 
             // create and mount React component 'Website' into container div
-            const website:JSX.Element = <gp.Website />;
-            // const website:JSX.Element = <Demo />;
+            const website:JSX.Element = <Website />;
 
             ReactDOM.render(
                 website,

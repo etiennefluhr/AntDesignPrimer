@@ -10,8 +10,6 @@
     {
         /** The current selected menu item. */
         currentMenuItem :gp.MenuItem;
-        /** Determines if the Sider is currently collapsed. */
-        collapsedSider  :boolean;
     }
 
     /*******************************************************************************************************************
@@ -30,7 +28,6 @@
 
             this.state = {
                 currentMenuItem: gp.MenuItem.SEARCH_PDF,
-                collapsedSider:  false,
             };
         }
 
@@ -43,24 +40,15 @@
         {
             gp.Debug.react.log( 'Website.render() being invoked' );
 
-            return <antd.Layout className="mainLayout">
+            return <antd.Layout>
 
                 <gp.Menu
                     onChangeMenu={    ( key:gp.MenuItem   ) :void => { this.onChangeMenu( key );          } }
-                    onCollapseSider={ ( collapsed:boolean ) :void => { this.onCollapseSider( collapsed ); } }
                 />
 
-                <antd.Layout
-                    className={
-                        (
-                            this.state.collapsedSider
-                            ? 'contentLayoutSiderCollapsed'
-                            : 'contentLayoutSiderExpanded'
-                        )
-                    }
-                >
+                <antd.Layout>
 
-                    <antd.Layout.Header className="mainHeader">
+                    <antd.Layout.Header>
                         { gp.Setting.TITLE }
                     </antd.Layout.Header>
 
@@ -68,7 +56,7 @@
                         currentSite={ this.state.currentMenuItem }
                     />
 
-                    <antd.Layout.Footer className="mainFooter">
+                    <antd.Layout.Footer>
                         { gp.Setting.COPYRIGHT }
                     </antd.Layout.Footer>
 
@@ -90,26 +78,6 @@
             this.setState(
                 {
                     currentMenuItem: key,
-                    collapsedSider:  this.state.collapsedSider,
-                }
-            );
-        }
-
-        /***************************************************************************************************************
-        *   Being invoked when the sider collapses or expands.
-        *
-        *   @param collapsed If the sider is now collapsed or expanded.
-        ***************************************************************************************************************/
-        private onCollapseSider( collapsed:boolean ) : void
-        {
-            gp.Debug.major.log( 'onCollapseSider [' + collapsed + ']' );
-
-            this.setState(
-                {
-                    // TODO to ...this.state,
-
-                    currentMenuItem: this.state.currentMenuItem,
-                    collapsedSider:  collapsed,
                 }
             );
         }

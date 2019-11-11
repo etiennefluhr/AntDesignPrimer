@@ -11,8 +11,6 @@
     {
         /** Being invoked when the selected menu item changes. */
         onChangeMenu: ( key:gp.MenuItem ) => void;
-        /** Being invoked when the menu sider collapses or expands. */
-        onCollapseSider: ( collapsed:boolean ) => void;
     }
 
     /*******************************************************************************************************************
@@ -34,11 +32,6 @@
                     breakpoint="lg"
                     collapsedWidth="0"
                     theme="light"
-                    onCollapse={
-                        ( collapsed:boolean, type:any ) :void => {
-                            this.props.onCollapseSider( collapsed );
-                        }
-                    }
                 >
 
                 <div className="logo" />
