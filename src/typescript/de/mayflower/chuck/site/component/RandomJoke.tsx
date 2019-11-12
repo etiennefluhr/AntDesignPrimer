@@ -65,6 +65,8 @@
                     Get a Random Joke
                 </antd.Button>
 
+                <antd.Divider />
+
                 <antd.List
                     dataSource={ this.state.jokes }
                     renderItem={
