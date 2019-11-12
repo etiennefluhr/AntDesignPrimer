@@ -34,7 +34,11 @@
                     style={ { height: '100vh', } }
                 >
 
-                <div className="logo" />
+                <img
+                    src={ chuck.Setting.PATH_IMAGE + 'logo.png' }
+                    alt={ chuck.Setting.TITLE }
+                    style={ { margin: '10px' } }
+                />
 
                 <antd.Menu
                     theme="dark"

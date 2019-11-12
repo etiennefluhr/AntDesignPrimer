@@ -70,8 +70,11 @@
 { /*
                 <div>
 
-                    <antd.List >
-                        Get a Random Joke
+                    <antd.List
+
+
+                    >
+
                     </antd.List>
 
                 </div>
