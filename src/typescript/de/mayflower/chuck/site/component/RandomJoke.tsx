@@ -61,16 +61,20 @@
                     <antd.Button
                         type="primary"
                         onClick={ ( me: React.MouseEvent ) :void => { this.onClickJokeButton(); } }
-                        loading={ this.state.requestInProgress }
+                        loading={  this.state.requestInProgress }
                     >
                         Get a Random Joke
                     </antd.Button>
 
                 </div>
 { /*
-                <SearchResults
-                    randomJoke={ this.state.randomJoke }
-                />
+                <div>
+
+                    <antd.List >
+                        Get a Random Joke
+                    </antd.List>
+
+                </div>
 */ }
             </div>;
         }
@@ -91,6 +95,14 @@
         private requestRandomJoke() : void
         {
             chuck.Debug.major.log( 'requestRandomJoke() being invoked.' );
+
+            this.setState(
+                {
+                    ...this.state,
+
+                    requestInProgress: true,
+                }
+            );
 
             // submit a new search
             chuck.API.getRandomJoke(
@@ -115,8 +127,6 @@
 
             this.setState(
                 {
-                    // ...this.state,
-
                     randomJoke:        data,
                     requestInProgress: false,
                 }
@@ -132,15 +142,13 @@
         {
             chuck.Debug.network.log( 'requesting random joke threw an error:' );
             chuck.Debug.network.log( error.message );
-/*
+
             this.setState(
                 {
-                    // ...this.state,
+                    ...this.state,
 
-                    randomJoke:        data,
                     requestInProgress: false,
                 }
             );
-*/
         }
     }

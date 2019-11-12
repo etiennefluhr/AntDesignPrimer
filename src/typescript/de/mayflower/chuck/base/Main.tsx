@@ -7,14 +7,11 @@
     /*******************************************************************************************************************
     *   The main class contains the application's point of entry.
     *
-    *   TODO Add TypeDoc output / jest / coverage output paths to .gitignore.
-    *   TODO enrich search group for specifying search categories in API.postSearchMatch!
+    *   TODO Unify names for all tests.
     *   TODO Add app logo in Menu.render!
-    *   TODO extract title and footer to separate components.
     *
-    *   TODO MINOR Unify names for all tests.
     *   TODO MINOR Update to latest npm packages version.
-    *   TODO MINOR Update Jest Tests.
+    *   TODO MINOR Update Jest Tests for the Website component.
     *******************************************************************************************************************/
     export class Main
     {
