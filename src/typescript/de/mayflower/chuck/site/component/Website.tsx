@@ -49,13 +49,21 @@
 
                 <antd.Layout>
 
-                    <antd.Layout.Header>{ chuck.Setting.TITLE }</antd.Layout.Header>
+                    <antd.Layout.Header
+                        style={ { color: '#ffffff' } }
+                    >
+                        { chuck.Setting.TITLE }
+                    </antd.Layout.Header>
 
                     <Content
                         currentSite={ this.state.currentMenuItem }
                     />
 
-                    <antd.Layout.Footer>{ chuck.Setting.COPYRIGHT }</antd.Layout.Footer>
+                    <antd.Layout.Footer
+                        style={ { color: '#ffffff' } }
+                    >
+                        { chuck.Setting.COPYRIGHT }
+                    </antd.Layout.Footer>
 
                 </antd.Layout>
 

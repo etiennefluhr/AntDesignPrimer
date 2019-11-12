@@ -8,7 +8,6 @@
     *   The main class contains the application's point of entry.
     *
     *   TODO Unify names for all tests.
-    *   TODO Add app logo in Menu.render!
     *
     *   TODO MINOR Update to latest npm packages version.
     *   TODO MINOR Update Jest Tests for the Website component.
