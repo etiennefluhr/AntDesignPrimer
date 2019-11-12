@@ -18,6 +18,17 @@
         )
         : void
         {
+            if ( gp.Setting.DEBUG_MOCK_ALL_REQUESTS )
+            {
+                window.setTimeout(
+                    () => {
+                        onSuccess( gp.Mock.mockRandomJoke() );
+                    },
+                    gp.Setting.DEBUG_MOCK_REQUEST_DELAY
+                );
+                return;
+            }
+
             gp.Networking.fetchViaApi(
                 gp.Setting.BASE_API_URL + 'jokes/random',
                 'GET',

@@ -5,14 +5,14 @@
     export interface RandomJokeResponse
     {
         /** The response type - success or error. */
-        'type':  string;
+        type:  string;
         /** The value body that contains the joke. */
-        'value': {
+        value: {
             /** The ID of the joke. */
-            'id':         number,
+            id:         number,
             /** The joke in prosa. */
-            'joke':       string,
+            joke:       string,
             /** All categories this joke is assigned to. */
-            'categories': string[],
+            categories: string[],
         }
     }
