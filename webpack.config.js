@@ -58,11 +58,16 @@ module.exports = ( env, argv ) => {
                         loader: 'style-loader'
                     },
                     {
-                        loader: 'css-loader'
+                        loader: 'css-loader',
+                        options: {
+                            url: false
+                        }
                     },
                     {
                         loader: 'less-loader',
                         options: {
+                            relativeUrls:      false,
+                            sourceMap:         true,
                             javascriptEnabled: true
                         }
                     }
