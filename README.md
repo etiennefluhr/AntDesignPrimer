@@ -44,6 +44,11 @@ Wir wollen uns den praktischen Einsatz von TypeScript und React anhand dieser Bi
 
 <hr>
 
+## Installation
+Der folgende Befehl installiert alle npm Pakete die der genannte Tech Stack benötigt:
+
+`npm install`
+
 ## npm targets
 
 ![TypeScript](_ASSET/readme/150px/logo_typescript.png)
