@@ -31,13 +31,13 @@
                     breakpoint="lg"
                     collapsedWidth="0"
                     theme="dark"
-                    style={ { minHeight: '100vh', } }
+                    className="sider"
                 >
 
                 <img
                     src={ chuck.Setting.PATH_IMAGE + 'logo.png' }
                     alt={ chuck.Setting.TITLE }
-                    style={ { margin: '8px' } }
+                    className="logo"
                 />
 
                 <antd.Menu

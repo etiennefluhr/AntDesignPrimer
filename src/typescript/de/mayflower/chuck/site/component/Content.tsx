@@ -27,7 +27,9 @@
         {
             chuck.Debug.react.log( 'Content.render() being invoked' );
 
-            return <antd.Layout.Content style={ { padding: '30px 50px', } } >
+            return <antd.Layout.Content
+                className="content"
+            >
 
                 <div>
                     { this.createContent() }

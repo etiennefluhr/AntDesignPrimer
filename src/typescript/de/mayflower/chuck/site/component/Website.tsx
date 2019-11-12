@@ -50,7 +50,7 @@
                 <antd.Layout>
 
                     <antd.Layout.Header
-                        style={ { color: '#ffffff' } }
+                        className="header"
                     >
                         { chuck.Setting.TITLE }
                     </antd.Layout.Header>
@@ -60,7 +60,7 @@
                     />
 
                     <antd.Layout.Footer
-                        style={ { color: '#ffffff' } }
+                        className="footer"
                     >
                         { chuck.Setting.COPYRIGHT }
                     </antd.Layout.Footer>
