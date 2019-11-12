@@ -1,6 +1,6 @@
 
     import { RandomJoke } from '../..';
-    import * as gp        from '../..';
+    import * as chuck     from '../..';
     import * as React     from 'react';
     import * as antd      from 'antd';
 
@@ -10,13 +10,13 @@
     export interface ContentProps
     {
         /** The current selected content site to display. */
-        currentSite: gp.MenuItem;
+        currentSite: chuck.MenuItem;
     }
 
     /*******************************************************************************************************************
     *   The react component that represents the content part of the website.
     *******************************************************************************************************************/
-    export class Content extends React.Component<gp.ContentProps, any>
+    export class Content extends React.Component<chuck.ContentProps, any>
     {
         /***************************************************************************************************************
         *   Being invoked every time this component renders.
@@ -25,7 +25,7 @@
         ***************************************************************************************************************/
         public render() : JSX.Element
         {
-            gp.Debug.react.log( 'Content.render() being invoked' );
+            chuck.Debug.react.log( 'Content.render() being invoked' );
 
             return <antd.Layout.Content style={ { padding: '30px 50px', } } >
 
@@ -45,7 +45,7 @@
         {
             switch ( this.props.currentSite )
             {
-                case gp.MenuItem.RANDOM_JOKE:
+                case chuck.MenuItem.RANDOM_JOKE:
                 {
                     return <RandomJoke />;
                 }

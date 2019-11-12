@@ -1,5 +1,5 @@
 
-    import * as gp       from '..';
+    import * as chuck    from '..';
     import { Website }   from '..';
     import * as React    from 'react';
     import * as ReactDOM from 'react-dom';
@@ -24,11 +24,11 @@
         public static main() : void
         {
             // set website title
-            document.title = gp.Setting.TITLE;
+            document.title = chuck.Setting.TITLE;
 
             // acclaim debug console
-            gp.Debug.major.log( gp.Setting.TITLE + ', ' + gp.Setting.COPYRIGHT );
-            gp.Debug.major.log();
+            chuck.Debug.major.log( chuck.Setting.TITLE + ', ' + chuck.Setting.COPYRIGHT );
+            chuck.Debug.major.log();
 
             // add container div
             const websiteContainer:HTMLDivElement = document.createElement( 'div' );

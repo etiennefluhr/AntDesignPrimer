@@ -1,5 +1,5 @@
 
-    import * as gp from '..';
+    import * as chuck from '..';
 
     /*******************************************************************************************************************
     *   Triggers all different API requests.
@@ -13,28 +13,28 @@
         *   @param onError   The callback method to invoke when an error occurred.
         ***************************************************************************************************************/
         public static getRandomJoke(
-            onSuccess: ( json:gp.RandomJokeResponse ) => void,
+            onSuccess: ( json:chuck.RandomJokeResponse ) => void,
             onError:   ( error:Error ) => void
         )
         : void
         {
-            if ( gp.Setting.DEBUG_MOCK_ALL_REQUESTS )
+            if ( chuck.Setting.DEBUG_MOCK_ALL_REQUESTS )
             {
                 window.setTimeout(
                     () => {
-                        onSuccess( gp.Mock.mockRandomJoke() );
+                        onSuccess( chuck.Mock.mockRandomJoke() );
                     },
-                    gp.Setting.DEBUG_MOCK_REQUEST_DELAY
+                    chuck.Setting.DEBUG_MOCK_REQUEST_DELAY
                 );
                 return;
             }
 
-            gp.Networking.fetchViaApi(
-                gp.Setting.BASE_API_URL + 'jokes/random',
+            chuck.Networking.fetchViaApi(
+                chuck.Setting.BASE_API_URL + 'jokes/random',
                 'GET',
                 null,
                 ( json:JSON ) => {
-                    const dto :gp.RandomJokeResponse = json as unknown as gp.RandomJokeResponse;
+                    const dto :chuck.RandomJokeResponse = json as unknown as chuck.RandomJokeResponse;
                     onSuccess( dto );
                 },
                 ( error:Error ) => {

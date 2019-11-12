@@ -1,5 +1,5 @@
 
-    import * as gp from '..';
+    import * as chuck from '..';
 
     /*******************************************************************************************************************
     *   Offers network functionality for requesting the backend API.
@@ -30,7 +30,7 @@
         )
         : void
         {
-            gp.Debug.network.log(
+            chuck.Debug.network.log(
                 'Requesting API URL: [' + url + '] '
                 + 'via [' + method + '] '
                 + 'with body [' + JSON.stringify( body ) + ']'
@@ -58,7 +58,7 @@
                         return response.json();
                     }
 
-                    gp.Debug.network.log( 'Response is NOT okay - HTTP Status [' + response.status + ']' );
+                    chuck.Debug.network.log( 'Response is NOT okay - HTTP Status [' + response.status + ']' );
 
                     onError( new Error( 'Response is NOT okay - HTTP Status [' + response.status + ']' ) );
                 }
@@ -72,7 +72,7 @@
                         return;
                     }
 
-                    gp.Debug.network.log( 'JSON from Response is NULL !? [' + json + ']' );
+                    chuck.Debug.network.log( 'JSON from Response is NULL !? [' + json + ']' );
 
                     onError( new Error( 'JSON from Response is NULL' ) );
                 }
@@ -80,8 +80,8 @@
             .catch(
                 ( error:Error ) :void => {
 
-                    gp.Debug.network.log( 'Caught error on connecting to URL [' + url + ']' );
-                    gp.Debug.network.log( error.message );
+                    chuck.Debug.network.log( 'Caught error on connecting to URL [' + url + ']' );
+                    chuck.Debug.network.log( error.message );
 
                     onError( error );
                 }

@@ -1,5 +1,5 @@
 
-    import * as gp           from '../..';
+    import * as chuck        from '../..';
     import { Menu, Content } from '../..';
     import * as React        from 'react';
     import * as antd         from 'antd';
@@ -10,13 +10,13 @@
     export interface WebsiteState
     {
         /** The current selected menu item. */
-        currentMenuItem :gp.MenuItem;
+        currentMenuItem :chuck.MenuItem;
     }
 
     /*******************************************************************************************************************
     *   The react component that represents the entire website.
     *******************************************************************************************************************/
-    export class Website extends React.Component<any, gp.WebsiteState>
+    export class Website extends React.Component<any, chuck.WebsiteState>
     {
         /***************************************************************************************************************
         *   Creates a new Website React component.
@@ -28,7 +28,7 @@
             super( props );
 
             this.state = {
-                currentMenuItem: gp.MenuItem.RANDOM_JOKE,
+                currentMenuItem: chuck.MenuItem.RANDOM_JOKE,
             };
         }
 
@@ -39,23 +39,23 @@
         ***************************************************************************************************************/
         public render() : JSX.Element
         {
-            gp.Debug.react.log( 'Website.render() being invoked' );
+            chuck.Debug.react.log( 'Website.render() being invoked' );
 
             return <antd.Layout>
 
                 <Menu
-                    onChangeMenu={ ( key:gp.MenuItem ) :void => { this.onChangeMenu( key ); } }
+                    onChangeMenu={ ( key:chuck.MenuItem ) :void => { this.onChangeMenu( key ); } }
                 />
 
                 <antd.Layout>
 
-                    <antd.Layout.Header>{ gp.Setting.TITLE }</antd.Layout.Header>
+                    <antd.Layout.Header>{ chuck.Setting.TITLE }</antd.Layout.Header>
 
                     <Content
                         currentSite={ this.state.currentMenuItem }
                     />
 
-                    <antd.Layout.Footer>{ gp.Setting.COPYRIGHT }</antd.Layout.Footer>
+                    <antd.Layout.Footer>{ chuck.Setting.COPYRIGHT }</antd.Layout.Footer>
 
                 </antd.Layout>
 
@@ -68,9 +68,9 @@
         *
         *   @param key The current selected key index in the menu.
         ***************************************************************************************************************/
-        private onChangeMenu( key:gp.MenuItem ) : void
+        private onChangeMenu( key:chuck.MenuItem ) : void
         {
-            gp.Debug.major.log( 'Website.onChangeMenu to key [' + key + ']' );
+            chuck.Debug.major.log( 'Website.onChangeMenu to key [' + key + ']' );
 
             this.setState(
                 {

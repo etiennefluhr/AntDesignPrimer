@@ -1,5 +1,5 @@
 
-    import * as gp from '..';
+    import * as chuck from '..';
 
     /*******************************************************************************************************************
     *   Represents a debug group whose logging can be enabled or disabled.
@@ -34,9 +34,9 @@
         ***************************************************************************************************************/
         public log( msg:string = '' ):void
         {
-            if ( gp.Setting.DEBUG_MODE && this.debugEnabled )
+            if ( chuck.Setting.DEBUG_MODE && this.debugEnabled )
             {
-                const lineToLog:string = ( '[' + gp.String.getDateTimeString() + '] ' + msg );
+                const lineToLog:string = ( '[' + chuck.String.getDateTimeString() + '] ' + msg );
 
                 // tslint:disable-next-line:no-console
                 console.log( lineToLog );

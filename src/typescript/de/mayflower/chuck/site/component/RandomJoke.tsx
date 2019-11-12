@@ -1,5 +1,5 @@
 
-    import * as gp    from '../..';
+    import * as chuck from '../..';
     import * as React from 'react';
     import * as antd  from 'antd';
 
@@ -12,13 +12,13 @@
         requestInProgress :boolean;
 
         /** The search results from the last search response. */
-        randomJoke        :gp.RandomJokeResponse;
+        randomJoke        :chuck.RandomJokeResponse;
     }
 
     /*******************************************************************************************************************
     *   The react component that represents the RandomJoke main content page.
     *******************************************************************************************************************/
-    export class RandomJoke extends React.Component<any, gp.RandomJokeState>
+    export class RandomJoke extends React.Component<any, chuck.RandomJokeState>
     {
         /***************************************************************************************************************
         *   Creates a new Website React component.
@@ -40,7 +40,7 @@
         ***************************************************************************************************************/
         public componentDidMount() : void
         {
-            gp.Debug.react.log( 'RandomJoke.componentDidMount() being invoked' );
+            chuck.Debug.react.log( 'RandomJoke.componentDidMount() being invoked' );
 
             this.requestRandomJoke();
         }
@@ -52,7 +52,7 @@
         ***************************************************************************************************************/
         public render() : JSX.Element
         {
-            gp.Debug.react.log( 'RandomJoke.render() being invoked' );
+            chuck.Debug.react.log( 'RandomJoke.render() being invoked' );
 
             return <div>
 
@@ -80,7 +80,7 @@
         ***************************************************************************************************************/
         private onClickJokeButton() : void
         {
-            gp.Debug.major.log( 'Button "Get a Joke" clicked.' );
+            chuck.Debug.major.log( 'Button "Get a Joke" clicked.' );
 
             this.requestRandomJoke();
         }
@@ -90,11 +90,11 @@
         ***************************************************************************************************************/
         private requestRandomJoke() : void
         {
-            gp.Debug.major.log( 'requestRandomJoke() being invoked.' );
+            chuck.Debug.major.log( 'requestRandomJoke() being invoked.' );
 
             // submit a new search
-            gp.API.getRandomJoke(
-                ( data:gp.RandomJokeResponse ) => {
+            chuck.API.getRandomJoke(
+                ( data:chuck.RandomJokeResponse ) => {
                     this.onRandomJokeResponse( data );
                 },
                 ( error:Error ) => {
@@ -108,10 +108,10 @@
         *
         *   @param data The received random joke data model.
         ***************************************************************************************************************/
-        private onRandomJokeResponse( data:gp.RandomJokeResponse ) : void
+        private onRandomJokeResponse( data:chuck.RandomJokeResponse ) : void
         {
-            gp.Debug.network.log( 'received random joke:' );
-            gp.Debug.network.log( JSON.stringify( data ) );
+            chuck.Debug.network.log( 'received random joke:' );
+            chuck.Debug.network.log( JSON.stringify( data ) );
 
             this.setState(
                 {
@@ -130,8 +130,8 @@
         ***************************************************************************************************************/
         private onRandomJokeError( error:Error ) : void
         {
-            gp.Debug.network.log( 'requesting random joke threw an error:' );
-            gp.Debug.network.log( error.message );
+            chuck.Debug.network.log( 'requesting random joke threw an error:' );
+            chuck.Debug.network.log( error.message );
 /*
             this.setState(
                 {
