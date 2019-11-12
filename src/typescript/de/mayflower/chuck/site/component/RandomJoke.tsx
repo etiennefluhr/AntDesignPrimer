@@ -2,6 +2,7 @@
     import * as chuck from '../..';
     import * as React from 'react';
     import * as antd  from 'antd';
+    import ListItem from 'antd/es/transfer/ListItem';
 
     /*******************************************************************************************************************
     *   The React state for the RandomJoke component.
@@ -12,7 +13,7 @@
         requestInProgress :boolean;
 
         /** The search results from the last search response. */
-        randomJoke        :chuck.RandomJokeResponse;
+        jokes             :chuck.RandomJokeResponse[];
     }
 
     /*******************************************************************************************************************
@@ -30,7 +31,7 @@
             super( props );
 
             this.state = {
-                randomJoke:        null,
+                jokes:             [],
                 requestInProgress: false,
             };
         }
@@ -56,29 +57,27 @@
 
             return <div>
 
-                <div>
+                <antd.Button
+                    type="primary"
+                    onClick={ ( me: React.MouseEvent ) :void => { this.onClickJokeButton(); } }
+                    loading={  this.state.requestInProgress }
+                >
+                    Get a Random Joke
+                </antd.Button>
 
-                    <antd.Button
-                        type="primary"
-                        onClick={ ( me: React.MouseEvent ) :void => { this.onClickJokeButton(); } }
-                        loading={  this.state.requestInProgress }
-                    >
-                        Get a Random Joke
-                    </antd.Button>
+                <antd.List
+                    dataSource={ this.state.jokes }
+                    renderItem={
+                        ( item:chuck.RandomJokeResponse, index:number ) :JSX.Element => {
+                            return (
+                                <antd.List.Item>
+                                    { ( index + 1 ) }: { item.value.joke }
+                                </antd.List.Item>
+                            );
+                        }
+                    }
+                />
 
-                </div>
-{ /*
-                <div>
-
-                    <antd.List
-
-
-                    >
-
-                    </antd.List>
-
-                </div>
-*/ }
             </div>;
         }
 
@@ -121,16 +120,19 @@
         /***************************************************************************************************************
         *   Being invoked when the random joke data has arrived.
         *
-        *   @param data The received random joke data model.
+        *   @param joke The received random joke data model.
         ***************************************************************************************************************/
-        private onRandomJokeResponse( data:chuck.RandomJokeResponse ) : void
+        private onRandomJokeResponse( joke:chuck.RandomJokeResponse ) : void
         {
             chuck.Debug.network.log( 'received random joke:' );
-            chuck.Debug.network.log( JSON.stringify( data ) );
+            chuck.Debug.network.log( JSON.stringify( joke ) );
+
+            const newJokes = this.state.jokes.splice( 0 );
+            newJokes.push( joke );
 
             this.setState(
                 {
-                    randomJoke:        data,
+                    jokes:             newJokes,
                     requestInProgress: false,
                 }
             );

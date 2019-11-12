@@ -31,7 +31,7 @@
                     breakpoint="lg"
                     collapsedWidth="0"
                     theme="dark"
-                    style={ { height: '100vh', } }
+                    style={ { minHeight: '100vh', } }
                 >
 
                 <img

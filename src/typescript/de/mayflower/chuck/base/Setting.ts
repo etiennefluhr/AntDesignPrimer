@@ -15,7 +15,7 @@
         /** Debug switch to mock ALL http requests, allowing offline mode. */
         public  static  readonly    DEBUG_MOCK_ALL_REQUESTS     :boolean            = ( true && Setting.DEBUG_MODE );
         /** Debug mocked timeout for API requests in millis. */
-        public  static  readonly    DEBUG_MOCK_REQUEST_DELAY    :number             = 1000;
+        public  static  readonly    DEBUG_MOCK_REQUEST_DELAY    :number             = 500;
 
         /** The relative path from index.html where all images reside. */
         public  static  readonly    PATH_IMAGE                  :string             = 'res/image/';
