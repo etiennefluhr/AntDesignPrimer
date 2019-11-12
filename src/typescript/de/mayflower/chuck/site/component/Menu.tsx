@@ -37,7 +37,7 @@
                 <img
                     src={ chuck.Setting.PATH_IMAGE + 'logo.png' }
                     alt={ chuck.Setting.TITLE }
-                    style={ { margin: '10px' } }
+                    style={ { margin: '8px' } }
                 />
 
                 <antd.Menu
