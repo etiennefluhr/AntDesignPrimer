@@ -15,17 +15,25 @@
         /***************************************************************************************************************
         *   Performs a HTTP request via the JavaScript fetch API.
         *
-        *   TODO Add onError path!
-        *
         *   @param url       The URL to request.
         *   @param method    The HTTP request method to use.
         *   @param body      The JSON body object to set.
         *   @param onSuccess The callback method to invoke and pass the data to when the result is available.
+        *   @param onError   The callback method to invoke when an error occurred.
         ***************************************************************************************************************/
-        public static fetchViaApi( url:string, method:string, body:any, onSuccess:( json:JSON ) => void ) : void
+        public static fetchViaApi(
+            url       :string,
+            method    :string,
+            body      :any,
+            onSuccess :( json:JSON ) => void,
+            onError   :( error:Error ) => void
+        )
+        : void
         {
             gp.Debug.network.log(
-                'Requesting API URL: [' + url + '] via [' + method + '] with body [' + JSON.stringify( body ) + ']'
+                'Requesting API URL: [' + url + '] '
+                + 'via [' + method + '] '
+                + 'with body [' + JSON.stringify( body ) + ']'
             );
 
             const headers:Headers = new Headers();
@@ -52,7 +60,7 @@
 
                     gp.Debug.network.log( 'Response is NOT okay - HTTP Status [' + response.status + ']' );
 
-                    return null;
+                    onError( new Error( 'Response is NOT okay - HTTP Status [' + response.status + ']' ) );
                 }
             )
             .then(
@@ -65,6 +73,8 @@
                     }
 
                     gp.Debug.network.log( 'JSON from Response is NULL !? [' + json + ']' );
+
+                    onError( new Error( 'JSON from Response is NULL' ) );
                 }
             )
             .catch(
@@ -72,6 +82,8 @@
 
                     gp.Debug.network.log( 'Caught error on connecting to URL [' + url + ']' );
                     gp.Debug.network.log( error.message );
+
+                    onError( error );
                 }
             );
         }

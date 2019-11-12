@@ -96,6 +96,9 @@
             gp.API.getRandomJoke(
                 ( data:gp.RandomJokeResponse ) => {
                     this.onRandomJokeResponse( data );
+                },
+                ( error:Error ) => {
+                    this.onRandomJokeError( error );
                 }
             );
         }
@@ -110,8 +113,6 @@
             gp.Debug.network.log( 'received random joke:' );
             gp.Debug.network.log( JSON.stringify( data ) );
 
-            console.log( data );
-
             this.setState(
                 {
                     // ...this.state,
@@ -120,5 +121,26 @@
                     requestInProgress: false,
                 }
             );
+        }
+
+        /***************************************************************************************************************
+        *   Being invoked when the random joke request threw an error.
+        *
+        *   @param error The error that occurred on requesting the random joke.
+        ***************************************************************************************************************/
+        private onRandomJokeError( error:Error ) : void
+        {
+            gp.Debug.network.log( 'requesting random joke threw an error:' );
+            gp.Debug.network.log( error.message );
+/*
+            this.setState(
+                {
+                    // ...this.state,
+
+                    randomJoke:        data,
+                    requestInProgress: false,
+                }
+            );
+*/
         }
     }
