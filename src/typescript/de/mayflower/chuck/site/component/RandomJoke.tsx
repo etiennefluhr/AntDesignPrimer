@@ -2,7 +2,6 @@
     import * as chuck from '../..';
     import * as React from 'react';
     import * as antd  from 'antd';
-    import ListItem from 'antd/es/transfer/ListItem';
 
     /*******************************************************************************************************************
     *   The React state for the RandomJoke component.
@@ -133,7 +132,7 @@
             chuck.Debug.network.log( 'received random joke:' );
             chuck.Debug.network.log( JSON.stringify( joke ) );
 
-            const newJokes = this.state.jokes.splice( 0 );
+            const newJokes:chuck.RandomJokeResponse[] = this.state.jokes.splice( 0 );
             newJokes.push( joke );
 
             this.setState(
