@@ -88,6 +88,13 @@ Die in den Webpack Dev Server gemountete Frontend Anwendung kann im Browser eing
 Alle Einstellungen für den Webpack Dev Server befinden sich in der `/webpack.config.js`
  im Abschnitt `config.devServer`.
 
+Damit HTTP Requests auf die API gelingen muss die CORS-Policy deaktiviert werden.
+ Dies gelingt über das Deaktivieren der Web Security des Browsers wie folgt:
+
+```
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security --user-data-dir /tmp
+```
+
 ![TypeDoc](_ASSET/readme/150px/logo_typedoc.png)
 
 ### TypeDoc generieren

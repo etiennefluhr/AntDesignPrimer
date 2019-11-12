@@ -6,13 +6,6 @@
 
     /*******************************************************************************************************************
     *   The main class contains the application's point of entry.
-    *
-    *   TODO Unify names for all tests.
-    *   TODO Hide empty image in empty list
-    *   TODO White logo image border via css?
-    *
-    *   TODO MINOR Update to latest npm packages version.
-    *   TODO MINOR Update Jest Tests for the Website component.
     *******************************************************************************************************************/
     export class Main
     {

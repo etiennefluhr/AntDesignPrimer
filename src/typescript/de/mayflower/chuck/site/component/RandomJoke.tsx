@@ -67,18 +67,22 @@
 
                 <antd.Divider />
 
-                <antd.List
-                    dataSource={ this.state.jokes }
-                    renderItem={
-                        ( item:chuck.RandomJokeResponse, index:number ) :JSX.Element => {
-                            return (
-                                <antd.List.Item>
-                                    { ( index + 1 ) }: { item.value.joke }
-                                </antd.List.Item>
-                            );
+                {
+                    this.state.jokes.length > 0
+                    ? <antd.List
+                        dataSource={ this.state.jokes }
+                        renderItem={
+                            ( item:chuck.RandomJokeResponse, index:number ) :JSX.Element => {
+                                return (
+                                    <antd.List.Item>
+                                        { ( index + 1 ) }: { item.value.joke }
+                                    </antd.List.Item>
+                                );
+                            }
                         }
-                    }
-                />
+                    />
+                    : null
+                }
 
             </div>;
         }
