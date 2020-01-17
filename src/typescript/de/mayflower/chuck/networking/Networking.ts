@@ -39,7 +39,11 @@
             const headers:Headers = new Headers();
 
             headers.append( 'Accept',       'application/json' );
-            headers.append( 'Content-Type', 'application/json' );
+
+            if ( method === 'post' )
+            {
+                headers.append( 'Content-Type', 'application/json' );
+            }
 
             fetch
             (
