@@ -1,3 +1,5 @@
+![Ant Design](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_ant_design.png)
+
 # Ant Design Primer
 
 Die geniale React-Komponentenbibliothek Ant Design bietet eine vollständige Palette an hochwertigen, responsiven und
@@ -6,8 +8,6 @@ Die geniale React-Komponentenbibliothek Ant Design bietet eine vollständige Pal
 
 In diesem Workshop wollen wir uns den praktischen Einsatz von TypeScript und React anhand dieser Bibliothek gemeinsam
  ansehen und damit ein minimales Web-Frontend erstellen, das mit einer bestehenden REST-API kommuniziert.
-
-![Ant Design](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_ant_design.png)
 
 ## Tech Stack
 - TypeScript 3.4.5
@@ -20,6 +20,8 @@ In diesem Workshop wollen wir uns den praktischen Einsatz von TypeScript und Rea
 - TypeDoc 0.14
 - TSLint 5.16
 
+![The International Chuck Norris Database](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/icndb.png)
+
 ## The International Chuck Norris Database
 
 Als bestehendes Backend für unser Frontend-Projekt bietet sich die **International
@@ -27,8 +29,6 @@ Als bestehendes Backend für unser Frontend-Projekt bietet sich die **Internatio
  und die uns mit unendlich vielen Chuck Norris Witzen versorgt. Beispielsweise liefert hier ein
  simpler GET-Request auf http://api.icndb.com/jokes/random einen entsprechenden Response Body im 
  JSON Format zurück, den wir anschließend parsen und in unserem Frontend anzeigen können:
-
-![The International Chuck Norris Database](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/icndb.png)
 
 ```
 {
