@@ -46,6 +46,14 @@
         }
 
         /***************************************************************************************************************
+        *   Being invoked when this component did mount.
+        ***************************************************************************************************************/
+        public componentWillUnmount() : void
+        {
+            chuck.Debug.react.log( 'RandomJoke.componentWillUnmount() being invoked' );
+        }
+
+        /***************************************************************************************************************
         *   Being invoked every time this component renders.
         *
         *   @return The rendered JSX.
