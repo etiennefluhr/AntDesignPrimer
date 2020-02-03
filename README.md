@@ -18,6 +18,7 @@ In diesem Workshop wollen wir uns den praktischen Einsatz von TypeScript und Rea
 - Less 3.9
 - Jest 24.9
 - TypeDoc 0.14
+- ESLint 6.8.0
 - TSLint 5.16
 
 ![The International Chuck Norris Database](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/icndb.png)
@@ -103,6 +104,15 @@ Damit HTTP Requests auf die API gelingen muss die CORS-Policy deaktiviert werden
 `npm run typedoc:generate`
 
 Generiert eine HTML Dokumentation unter `/doc` für alle TypeScript Quellcodes unter `/src/typescript`.
+
+![ESLint](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_eslint.png)
+
+### ESLint ausführen
+`npm run eslint:check`
+
+Führt den ESLinter für alle Quellcodes unter `/src` aus.
+
+Einstellungen für den Linter befinden sich unter `/.eslintrc.js`.
 
 ![TSLint](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_tslint.png)
 
