@@ -4,7 +4,7 @@
     *******************************************************************************************************************/
     export class Setting
     {
-        /** The name of the application. Intentionally exceeds the hard limit of 120 for TSLint demonstration. */
+        /** The name of the application. Intentionally exceeds the hard limit of 120 for ESLint demonstration. */
         public  static  readonly    TITLE                       :string             = 'Ant Design meets The International Chuck Norris Database';
         /** The copyright information. */
         public  static  readonly    COPYRIGHT                   :string             = '(c) 2020 Mayflower GmbH, v.1.0';
