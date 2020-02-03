@@ -65,9 +65,9 @@
                         return response.json();
                     }
 
-                    chuck.Debug.network.log( 'Response is NOT okay - HTTP Status [' + response.status + ']' );
+                    chuck.Debug.network.log( 'Response is NOT okay - HTTP Status [' + String( response.status ) + ']' );
 
-                    onError( new Error( 'Response is NOT okay - HTTP Status [' + response.status + ']' ) );
+                    onError( new Error( 'Response is NOT okay - HTTP Status [' + String( response.status ) + ']' ) );
                 }
             )
             .then(
@@ -79,7 +79,7 @@
                         return;
                     }
 
-                    chuck.Debug.network.log( 'JSON from Response is NULL !? [' + json + ']' );
+                    chuck.Debug.network.log( 'JSON from Response is NULL !? [' + String( json ) + ']' );
 
                     onError( new Error( 'JSON from Response is NULL' ) );
                 }

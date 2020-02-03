@@ -1,4 +1,5 @@
 
+    // eslint-disable-next-line import/no-deprecated
     import './de/mayflower/chuck/css/chuck.less';
     import * as chuck from './de/mayflower/chuck';
 

@@ -16,4 +16,4 @@
     export * from './site/component/RandomJoke';
     export * from './site/component/Website';
 
-    export * from './util/String';
+    export * from './util/StringUtil';

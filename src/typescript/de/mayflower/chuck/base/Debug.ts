@@ -36,7 +36,7 @@
         {
             if ( chuck.Setting.DEBUG_MODE && this.debugEnabled )
             {
-                const lineToLog:string = ( '[' + chuck.String.getDateTimeString() + '] ' + msg );
+                const lineToLog:string = ( '[' + chuck.StringUtil.getDateTimeString() + '] ' + msg );
 
                 // eslint-disable-next-line no-console
                 console.log( lineToLog );

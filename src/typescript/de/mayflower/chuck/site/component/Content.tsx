@@ -1,7 +1,7 @@
 
     import * as antd      from 'antd';
-    import * as chuck     from '../..';
     import * as React     from 'react';
+    import * as chuck     from '../..';
     import { RandomJoke } from '../..';
 
     /** ****************************************************************************************************************

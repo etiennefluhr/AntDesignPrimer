@@ -34,6 +34,7 @@ module.exports = {
         'indent': 'off',
 
         '@typescript-eslint/no-inferrable-types': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
 
         // '@typescript-eslint/indent': ['error', 4, { outerIIFEBody: 2 } ],
 
@@ -63,7 +64,7 @@ module.exports = {
         '@typescript-eslint/type-annotation-spacing': 'off',
         '@typescript-eslint/unified-signatures': 'error',
         '@typescript-eslint/prefer-readonly': 'error',
-        'arrow-body-style': ['error', 'as-needed'],
+        'arrow-body-style': ['error', 'always'],
         'arrow-parens': ['error', 'as-needed'],
         camelcase: 'error',
         'comma-dangle': [
@@ -117,6 +118,8 @@ module.exports = {
         'no-console': 'error',
         'no-debugger': 'error',
         'no-empty': 'error',
+        'no-empty-function': "off",
+        '@typescript-eslint/no-empty-function': "off",
         'no-eval': 'error',
         'no-extra-bind': 'error',
         'no-extra-semi': 'off',
