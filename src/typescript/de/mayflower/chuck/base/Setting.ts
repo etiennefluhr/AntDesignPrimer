@@ -12,7 +12,7 @@
         /** The global debug switch. */
         public  static  readonly    DEBUG_MODE                  :boolean            = true;
         /** Debug switch to mock ALL http requests, allowing offline mode. */
-        public  static  readonly    DEBUG_MOCK_ALL_REQUESTS     :boolean            = ( true && Setting.DEBUG_MODE );
+        public  static  readonly    DEBUG_MOCK_ALL_REQUESTS     :boolean            = ( false && Setting.DEBUG_MODE );
         /** Debug mocked timeout for API requests in millis. */
         public  static  readonly    DEBUG_MOCK_REQUEST_DELAY    :number             = 2500;
 

@@ -88,7 +88,7 @@
                 ( error:Error ) :void => {
 
                     chuck.Debug.network.log( 'Caught error on connecting to URL [' + url + ']' );
-                    chuck.Debug.network.log( error.message );
+                    chuck.Debug.network.log( ' Error message is: ' + error.message );
 
                     onError( error );
                 }
