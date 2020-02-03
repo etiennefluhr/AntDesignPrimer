@@ -7,7 +7,7 @@ Die geniale React-Komponentenbibliothek Ant Design bietet eine vollständige Pal
 In diesem Workshop wollen wir uns den praktischen Einsatz von TypeScript und React anhand dieser Bibliothek gemeinsam
  ansehen und damit ein minimales Web-Frontend erstellen, das mit einer bestehenden REST-API kommuniziert.
 
-![Ant Design](_ASSET/readme/150px/logo_ant_design.png)
+![Ant Design](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_ant_design.png)
 
 ## Tech Stack
 - TypeScript 3.4.5
@@ -28,7 +28,7 @@ Als bestehendes Backend für unser Frontend-Projekt bietet sich die **Internatio
  simpler GET-Request auf http://api.icndb.com/jokes/random einen entsprechenden Response Body im 
  JSON Format zurück, den wir anschließend parsen und in unserem Frontend anzeigen können:
 
-![The International Chuck Norris Database](_ASSET/readme/150px/icndb.png)
+![The International Chuck Norris Database](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/icndb.png)
 
 ```
 {
@@ -48,7 +48,7 @@ Der folgende Befehl installiert alle npm Pakete die der genannte Tech Stack ben�
 
 ## npm targets
 
-![TypeScript](_ASSET/readme/150px/logo_typescript.png)
+![TypeScript](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_typescript.png)
 
 ### TypeScript nach JavaScript kompilieren
 `npm run typescript:compile`
@@ -56,7 +56,7 @@ Der folgende Befehl installiert alle npm Pakete die der genannte Tech Stack ben�
 Kompiliert alle TypeScript Quellcodes von `/src` nach JavaScript unter `/bin`.
  Die Einstellungen für den TypeScript Compiler befinden sich unter `/tsconfig.json`.
 
-![Webpack](_ASSET/readme/150px/logo_webpack.png)
+![Webpack](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_webpack.png)
 
 ### Webpack in development ausführen
 `npm run webpack:dev`
@@ -97,14 +97,14 @@ Damit HTTP Requests auf die API gelingen muss die CORS-Policy deaktiviert werden
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security --user-data-dir /tmp
 ```
 
-![TypeDoc](_ASSET/readme/150px/logo_typedoc.png)
+![TypeDoc](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_typedoc.png)
 
 ### TypeDoc generieren
 `npm run typedoc:generate`
 
 Generiert eine HTML Dokumentation unter `/doc` für alle TypeScript Quellcodes unter `/src/typescript`.
 
-![TSLint](_ASSET/readme/150px/logo_tslint.png)
+![TSLint](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_tslint.png)
 
 ### TSLint ausführen
 `npm run tslint:check`
@@ -113,7 +113,7 @@ Führt den TypeScript Linter für alle Quellcodes unter `/src` aus.
 
 Einstellungen für den Linter befinden sich unter `/tslint.json`.
 
-![Mocha](_ASSET/readme/150px/logo_mocha.png)
+![Mocha](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_mocha.png)
 
 ### Alle TypeScript Tests mit Mocha aufrufen
 `npm run test:all`
@@ -121,7 +121,7 @@ Einstellungen für den Linter befinden sich unter `/tslint.json`.
 Ruft den Mocha Test Runner auf der alle definierten Tests in TypeScript Dateien unterhalb `/src/test` ausführt.
 Die Konfiguration für den Testrunner wird als Parameter im Anschluß an den Befehl definiert.
 
-![Jest](_ASSET/readme/150px/logo_jest.png)
+![Jest](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_jest.png)
 
 ### Alle TypeScript Tests mit Jest aufrufen
 `npm run test:jest`

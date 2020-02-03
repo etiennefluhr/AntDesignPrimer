@@ -7,7 +7,7 @@
         /** The name of the application. Intentionally exceeds the hard limit of 120 for TSLint demonstration. */
         public  static  readonly    TITLE                       :string             = 'Ant Design meets The International Chuck Norris Database';
         /** The copyright information. */
-        public  static  readonly    COPYRIGHT                   :string             = '(c) 2019 Mayflower GmbH, v.1.0';
+        public  static  readonly    COPYRIGHT                   :string             = '(c) 2020 Mayflower GmbH, v.1.0';
 
         /** The global debug switch. */
         public  static  readonly    DEBUG_MODE                  :boolean            = true;
