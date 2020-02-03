@@ -136,6 +136,8 @@ Die Konfiguration für Jest befindet sich in der `/package.json` im Abschnitt `j
 
 Gleiches Verhalten wie das Target `test:jest` und im Anschluß wird die Code Coverage unter `/coverage` generiert.
 
+![Aufgaben](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/exam.jpg)
+
 ## Aufgaben
 
 ### 1. Anzeige eines Progress-Bars 
@@ -152,6 +154,8 @@ Dauert die Verbindung zur API etwas länger, so kann der Benutzer, während gera
  zu einem anderen Menüpunkt wechseln. In diesem Fall ist beim Eintreffen der API-Response die Komponente **RandomJoke**
  nicht mehr gemountet und React reagiert mit dem Fehler **setState in unmounted component**.
  Finden Sie hierfür eine professionelle Lösung und bauen Sie diese in den Workshop ein.
+
+![Hand Outs](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/handout.png)
 
 ## Hand Outs
 
