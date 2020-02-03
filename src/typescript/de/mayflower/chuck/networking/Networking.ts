@@ -38,7 +38,7 @@
 
             const headers:Headers = new Headers();
 
-            headers.append( 'Accept',       'application/json' );
+            headers.append( 'Accept', 'application/json' );
 
             if ( method === 'post' )
             {

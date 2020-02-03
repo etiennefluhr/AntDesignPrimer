@@ -17,7 +17,7 @@
                 type: 'success',
                 value: {
                     'id':         1,
-                    'joke':       'Time stands still for no man. Except that man is Chuck Norris.',
+                    'joke':       'MOCKED: Time stands still for no man. Except that man is Chuck Norris.',
                     'categories': [],
                 }
             }
