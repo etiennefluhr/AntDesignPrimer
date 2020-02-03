@@ -1,7 +1,7 @@
 
     import * as chuck from '..';
 
-    /*******************************************************************************************************************
+    /** ****************************************************************************************************************
     *   Offers network functionality for requesting the backend API.
     *
     *   Start the Chrome with
@@ -12,7 +12,7 @@
         /** The HTTP status code that expresses a successful HTTP connection. */
         private     static          readonly            HTTP_OK                 :number         = 200;
 
-        /***************************************************************************************************************
+        /** ************************************************************************************************************
         *   Performs a HTTP request via the JavaScript fetch API.
         *
         *   @param url         The URL to request.
@@ -54,7 +54,7 @@
                     method:  method,
                     headers: headers,
                     body:    ( body === null ? null : JSON.stringify( body ) ),
-                    signal:  abortSignal
+                    signal:  abortSignal,
                 }
             )
             .then(
@@ -73,7 +73,7 @@
             .then(
                 ( json:JSON ) :void => {
 
-                    if ( json != null )
+                    if ( json !== null )
                     {
                         onSuccess( json );
                         return;

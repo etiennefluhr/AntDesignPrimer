@@ -1,7 +1,7 @@
 
     import * as chai   from 'chai';
-    import * as React  from 'react';
     import * as Enzyme from 'enzyme';
+    import * as React from 'react';
     import { Content, MenuItem } from '../../../../../typescript/de/mayflower/chuck';
 
     describe( 'React component Content', () =>
