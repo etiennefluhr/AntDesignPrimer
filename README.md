@@ -139,14 +139,19 @@ Gleiches Verhalten wie das Target `test:jest` und im Anschluß wird die Code Cov
 ## Aufgaben
 
 ### 1. Anzeige eines Progress-Bars 
-Führen Sie ein neues State-Feld **jokeCount** für die Komponente **Website** ein, die festhält,
- wieviele Witze in dieser Sitzung bereits angezeigt wurde. Eine neue Instanz der Komponente **Progress**
- aus dem Ant Design Framework soll auf der Komponente **RandomJoke** anzeigen, wieviele
+Eine neue Instanz der Komponente **Progress**
+ aus dem Ant Design Framework soll in der Komponente **RandomJoke** anzeigen, wieviele
  Chuck Norris-Witze der maximal täglich ertragbaren Anzahl von 10 bereits angezeigt wurden.
 
 ### 2. Anzeige einer Notification für leere Seiten
-Zeigen Sie einen **Alert** Dialog mit einer sprechenden Beschreibung und der Severity INFO aus dem Ant Design Framework
+Zeigen Sie einen **Notification** Dialog mit einer sprechenden Beschreibung und der Severity INFO aus dem Ant Design Framework
  an, wenn der Benutzer einen Menüpunkt auswählt, für den im **Content**-Bereich noch "To be defined .." angezeigt wird.
+
+### 3. Fixen des "Unmounted Component" Problems
+Dauert die Verbindung zur API etwas länger, so kann der Benutzer, während gerade ein RandomJoke requested wird,
+ zu einem anderen Menüpunkt wechseln. In diesem Fall ist beim Eintreffen der API-Response die Komponente **RandomJoke**
+ nicht mehr gemountet und React reagiert mit dem Fehler **setState in unmounted component**.
+ Finden Sie hierfür eine professionelle Lösung und bauen Sie diese in den Workshop ein.
 
 ## Hand Outs
 
