@@ -15,18 +15,20 @@
         /***************************************************************************************************************
         *   Performs a HTTP request via the JavaScript fetch API.
         *
-        *   @param url       The URL to request.
-        *   @param method    The HTTP request method to use.
-        *   @param body      The JSON body object to set.
-        *   @param onSuccess The callback method to invoke and pass the data to when the result is available.
-        *   @param onError   The callback method to invoke when an error occurred.
+        *   @param url         The URL to request.
+        *   @param method      The HTTP request method to use.
+        *   @param body        The JSON body object to set.
+        *   @param onSuccess   The callback method to invoke and pass the data to when the result is available.
+        *   @param onError     The callback method to invoke when an error occurred.
+        *   @param abortSignal The abort signal that may cancel this fetch request.
         ***************************************************************************************************************/
         public static fetchViaApi(
-            url       :string,
-            method    :string,
-            body      :any,
-            onSuccess :( json:JSON ) => void,
-            onError   :( error:Error ) => void
+            url         :string,
+            method      :string,
+            body        :any,
+            onSuccess   :( json:JSON ) => void,
+            onError     :( error:Error ) => void,
+            abortSignal :AbortSignal
         )
         : void
         {
@@ -52,6 +54,7 @@
                     method:  method,
                     headers: headers,
                     body:    ( body === null ? null : JSON.stringify( body ) ),
+                    signal:  abortSignal
                 }
             )
             .then(

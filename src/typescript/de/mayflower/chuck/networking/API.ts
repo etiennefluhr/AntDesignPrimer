@@ -9,12 +9,14 @@
         /***************************************************************************************************************
         *   Requests a random joke.
         *
-        *   @param onSuccess The callback method to invoke and pass the response data to when the result is available.
-        *   @param onError   The callback method to invoke when an error occurred.
+        *   @param onSuccess   The callback method to invoke and pass the response data to when the result is available.
+        *   @param onError     The callback method to invoke when an error occurred.
+        *   @param abortSignal The abort signal that may cancel this fetch request.
         ***************************************************************************************************************/
         public static getRandomJoke(
-            onSuccess: ( json:chuck.RandomJokeResponse ) => void,
-            onError:   ( error:Error ) => void
+            onSuccess   :( json:chuck.RandomJokeResponse ) => void,
+            onError     :( error:Error ) => void,
+            abortSignal :AbortSignal
         )
         : void
         {
@@ -39,7 +41,8 @@
                 },
                 ( error:Error ) => {
                     onError( error );
-                }
+                },
+                abortSignal
             );
         }
     }

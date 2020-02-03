@@ -127,7 +127,8 @@
                 },
                 ( error:Error ) => {
                     this.onRandomJokeError( error );
-                }
+                },
+                null
             );
         }
 
