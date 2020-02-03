@@ -54,6 +54,7 @@
         {
             chuck.Debug.react.log( 'RandomJoke.render() being invoked' );
 
+            // TODO show a Progress bar with maximum sustainable 'Chuck Norris Jokes per day' count
             return <div>
 
                 <antd.Button
