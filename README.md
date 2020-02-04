@@ -1,17 +1,25 @@
+
+# Ant Design<br>Web-Frontend Workshop
+
 ![Ant Design](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_ant_design.png)
 
-# Ant Design Primer
+In diesem Workshop wollen wir die Komponentenbibliothek Ant Design im praktischen Einsatz kennenlernen. Die geniale 
+ React-Komponentenbibliothek Ant Design bietet eine vollständige Palette an hochwertigen, responsiven und
+ reaktiven Enterprise UI-Komponenten für Web-Frontends. Darüberhinaus ermöglicht sie die schnelle Realisierung 
+ kompletter Webpräsenzen ohne dafür eine einzige Zeile HTML oder CSS Code schreiben zu müssen.
 
-Die geniale React-Komponentenbibliothek Ant Design bietet eine vollständige Palette an hochwertigen, responsiven und
- reaktiven Enterprise UI-Komponenten und ermöglicht darüberhinaus die schnelle Realisierung kompletter, moderner
- Web-Frontends ohne dafür eine einzige Zeile HTML oder CSS Code schreiben zu müssen.
+## npm TechStack
 
-In diesem Workshop wollen wir uns den praktischen Einsatz von TypeScript und React anhand dieser Bibliothek gemeinsam
- ansehen und damit ein minimales Web-Frontend erstellen, das mit einer bestehenden REST-API kommuniziert.
+![npm](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_npm.png)
+
+
+Wir erstellen damit ein minimales Web-Frontend, das mit den Technlogien TypeScript, Webpack und React realisiert wird
+ und hierfür einen modernen npm-TechStack mit zahlreichen Zusatztools (Tests, Linter usw.) breitstellt.
+ Die Requests zum Backend erfolgen über die integrierte JavaScript Fetch API.
 
 ## Tech Stack
-- TypeScript 3.4.5
 - Ant Design 3.1
+- TypeScript 3.4.5
 - Webpack 4.40
 - React 16.2
 - JavaScript Fetch API
@@ -23,7 +31,7 @@ In diesem Workshop wollen wir uns den praktischen Einsatz von TypeScript und Rea
 
 ![The International Chuck Norris Database](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/icndb.png)
 
-## The International Chuck Norris Database
+## Web-Backend:<br>The International Chuck Norris Database
 
 Als bestehendes Backend für unser Frontend-Projekt bietet sich die **International
  Chuck Norris Database** an, eine simple REST-API die wir mit der JavaScript Fetch API ansprechen können
