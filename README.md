@@ -1,4 +1,5 @@
 
+
 # Ant Design Web-Frontend Workshop
 
 ![Ant Design](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_ant_design.png)
@@ -8,15 +9,17 @@ In diesem Workshop wollen wir die Komponentenbibliothek Ant Design im praktische
  reaktiven Enterprise UI-Komponenten für Web-Frontends. Darüberhinaus ermöglicht sie die schnelle Realisierung 
  kompletter Webpräsenzen ohne dafür eine einzige Zeile HTML oder CSS Code schreiben zu müssen.
 
-## npm TechStack
+
+## npm Tech Stack
 
 ![npm](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_npm.png)
 
 Zum Bauen unseres Web-Frontends nutzen wir den Paketmanager npm. Mit diesem können wir schnell und einfach
- einen modernen Web-Frontend TechStack unter Verwendung der Technologien TypeScript, Webpack und React realisieren.
+ einen modernen Web-Frontend Tech Stack unter Verwendung der Technologien TypeScript, Webpack und React realisieren.
  Außerdem können wir zahlreiche Zusatztools wie Tests, Linter und CSS-Präprozessoren aus der npm Registry nutzen.
 
-## Tech Stack
+Insgesamt kommen die folgenden Technologien zum Einsatz:
+
 - Ant Design 3.1
 - TypeScript 3.4.5
 - Webpack 4.40
@@ -28,15 +31,16 @@ Zum Bauen unseres Web-Frontends nutzen wir den Paketmanager npm. Mit diesem kön
 - ESLint 6.8.0
 - TSLint 5.16
 
+
+## The International Chuck Norris Database
+
 ![The International Chuck Norris Database](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/icndb.png)
 
-## Web-Backend:<br>The International Chuck Norris Database
-
-Als bestehendes Backend für unser Frontend-Projekt bietet sich die **International
- Chuck Norris Database** an, eine simple REST-API die wir mit der integrierten JavaScript Fetch API ansprechen können
- und die uns mit unendlich vielen Chuck Norris Witzen versorgt. Beispielsweise liefert hier ein
- simpler GET-Request auf http://api.icndb.com/jokes/random einen entsprechenden Response Body im 
- JSON Format zurück, den wir anschließend parsen und in unserem Frontend anzeigen können:
+Als fertig bestehendes **Backend** für unser Frontend-Projekt bietet sich die **International
+ Chuck Norris Database** an, eine einfache und klar strukturierte REST-API die wir mit der integrierten
+ **JavaScript Fetch API** ansprechen können und die uns mit unendlich vielen Chuck Norris Witzen versorgt.
+ Beispielsweise liefert hier ein simpler GET-Request auf http://api.icndb.com/jokes/random einen entsprechenden
+ Response Body im JSON Format zurück, den wir anschließend in unserem Frontend parsen und anzeigen können:
 
 ```
 {
@@ -49,12 +53,81 @@ Als bestehendes Backend für unser Frontend-Projekt bietet sich die **Internatio
 }
 ```
 
+
 ## Installation
-Der folgende Befehl installiert alle npm Pakete die der genannte Tech Stack benötigt:
+Der folgende Befehl installiert alle npm Pakete die der genannte Tech Stack verwendet und die in der Datei
+ **package.json** aufgelistet sind. Die in dieser Datei im Bereich **script** aufgelisteten npm Targets stehen
+ anschließend zur Verfügung. 
 
 `npm install`
 
+
+## Entwicklung
+Zum Betrieb des Web-Frontends kann mit dem folgenden Befehl der Webpack Dev Server gestartet werden:
+
+`npm run webpack:devserver`
+
+Die in den Webpack Dev Server gemountete Frontend Anwendung kann im Browser eingesehen werden unter der Adresse
+ 
+ `http://localhost:5000/`
+
+Beim allen Änderungen am Projektcode baut der Webpack Dev Server das Frontend automatisch und lädt die Webseite
+ im Browser selbstständig neu.
+
+
+## Aufgaben
+
+![Aufgaben](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/exam.jpg)
+
+Hier nun zwei Übungsaufgaben die es umzusetzen gilt:
+
+### 1. Anzeige eines Progress-Bars 
+Eine neue Instanz der Komponente **Progress**
+ aus dem Ant Design Framework soll in der Komponente **RandomJoke** anzeigen, wieviele
+ Chuck Norris-Witze der maximal täglich ertragbaren Anzahl von 10 bereits angezeigt wurden.
+
+### 2. Anzeige einer Notification für leere Seiten
+Zeigen Sie einen **Notification** Dialog mit einer sprechenden Beschreibung und der Severity INFO aus dem Ant Design Framework
+ an, wenn der Benutzer einen Menüpunkt auswählt, für den im **Content**-Bereich noch "To be defined .." angezeigt wird.
+
+
+![Hand Outs](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/handout.png)
+
+## Hand Outs
+
+### Warum TypeScript?
+
+https://blog.mayflower.de/6135-typescript.html
+
+### Aufsetzen eines Web-Tech Stacks mit npm, TypeScript und Webpack
+
+https://blog.mayflower.de/6324-typescript-tooling-npm-webpack.html
+
+### TypeScript im Vergleich zu Java
+
+https://blog.mayflower.de/6344-typeacript-java-entwickler.html
+
+### TypeScript Workshop für Einsteiger
+
+https://blog.mayflower.de/6229-typescript-workshop.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## npm targets
+
+Mit den folgenden Befehlen können die einzelnen Tools unseres npm-Tech Stacks ausgeführt werden. Zum Entwickeln selbst
 
 ![TypeScript](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_typescript.png)
 
@@ -70,7 +143,7 @@ Kompiliert alle TypeScript Quellcodes von `/src` nach JavaScript unter `/bin`.
 `npm run webpack:dev`
 
 Gleiches Verhalten wie Target `typescript:compile`. Darübehinaus werden alle internen
- kompilierten JavaScript Dateien unter `/bin` mit allen externen JavaScript Quellcodes 
+ kompilierten JavaScript Dateien unter `/bin` mit allen externen JavaScript Quellcodes
  der verwendeten Bibliotheken zusammengefügt und unter `dist/js/bundle.js` vereint.
 
 Nach dem erfolgreichen Abschluss dieses Targets kann das fertige Frontend unter 
@@ -155,35 +228,4 @@ Die Konfiguration für Jest befindet sich in der `/package.json` im Abschnitt `j
 
 Gleiches Verhalten wie das Target `test:jest` und im Anschluß wird die Code Coverage unter `/coverage` generiert.
 
-![Aufgaben](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/exam.jpg)
 
-## Aufgaben
-
-### 1. Anzeige eines Progress-Bars 
-Eine neue Instanz der Komponente **Progress**
- aus dem Ant Design Framework soll in der Komponente **RandomJoke** anzeigen, wieviele
- Chuck Norris-Witze der maximal täglich ertragbaren Anzahl von 10 bereits angezeigt wurden.
-
-### 2. Anzeige einer Notification für leere Seiten
-Zeigen Sie einen **Notification** Dialog mit einer sprechenden Beschreibung und der Severity INFO aus dem Ant Design Framework
- an, wenn der Benutzer einen Menüpunkt auswählt, für den im **Content**-Bereich noch "To be defined .." angezeigt wird.
-
-![Hand Outs](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/handout.png)
-
-## Hand Outs
-
-### Warum TypeScript?
-
-https://blog.mayflower.de/6135-typescript.html
-
-### Aufsetzen eines Web-Techstacks mit npm, TypeScript und Webpack
-
-https://blog.mayflower.de/6324-typescript-tooling-npm-webpack.html
-
-### TypeScript im Vergleich zu Java
-
-https://blog.mayflower.de/6344-typeacript-java-entwickler.html
-
-### TypeScript Workshop für Einsteiger
-
-https://blog.mayflower.de/6229-typescript-workshop.html
