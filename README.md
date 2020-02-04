@@ -60,9 +60,9 @@ Als fertig bestehendes **Backend** für unser Frontend-Projekt bietet sich die *
 
 ## Installation
 
-Der folgende Befehl installiert alle npm Pakete die der genannte Tech Stack verwendet und die in der Datei
- **package.json** aufgelistet sind. Die in dieser Datei im Bereich **script** aufgelisteten npm Targets stehen
- anschließend zur Verfügung. 
+Nach dem Klones des Git Repositories installiert der folgende Befehl alle npm Pakete die der genannte Tech Stack 
+ verwendet und die in der Datei **package.json** aufgelistet sind. Die in dieser Datei im Bereich **script** 
+ aufgelisteten npm Targets stehen anschließend zur Verfügung.
 
 `npm install`
 
