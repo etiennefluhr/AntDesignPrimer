@@ -1,5 +1,4 @@
 
-
 ![Ant Design](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_ant_design.png)
 
 # Ant Design Web-Frontend Workshop
@@ -9,6 +8,7 @@ In diesem Workshop wollen wir die Komponentenbibliothek Ant Design im praktische
  reaktiven Enterprise UI-Komponenten für Web-Frontends. Darüberhinaus ermöglicht sie die schnelle Realisierung 
  kompletter Webpräsenzen ohne dafür eine einzige Zeile HTML oder CSS Code schreiben zu müssen.
 
+<hr>
 
 ![npm](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_npm.png)
 
@@ -31,6 +31,7 @@ Insgesamt kommen die folgenden Technologien zum Einsatz:
 - ESLint 6.8.0
 - TSLint 5.16
 
+<hr>
 
 ![The International Chuck Norris Database](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/icndb.png)
 
@@ -53,6 +54,7 @@ Als fertig bestehendes **Backend** für unser Frontend-Projekt bietet sich die *
 }
 ```
 
+<hr>
 
 ![Installation](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/install.png)
 
@@ -64,6 +66,7 @@ Der folgende Befehl installiert alle npm Pakete die der genannte Tech Stack verw
 
 `npm install`
 
+<hr>
 
 ![Entwicklung](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/develop.png)
 
@@ -80,6 +83,7 @@ Die gebaute und in den Webpack Dev Server gemountete Frontend Anwendung kann jet
 Beim allen Änderungen am Projektcode baut der Webpack Dev Server das Frontend selbstständig neu und aktualisiert die
  Webseite im Browser.
 
+<hr>
 
 ![Aufgaben](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/exam.png)
 
@@ -96,6 +100,7 @@ Eine neue Instanz der Komponente **Progress**
 Zeigen Sie einen **Notification** Dialog mit einer sprechenden Beschreibung und der Severity INFO aus dem Ant Design Framework
  an, wenn der Benutzer einen Menüpunkt auswählt, für den im **Content**-Bereich noch "To be defined .." angezeigt wird.
 
+<hr>
 
 ![Hand Outs](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/handout.png)
 
@@ -119,6 +124,9 @@ https://blog.mayflower.de/6344-typeacript-java-entwickler.html
 
 https://blog.mayflower.de/6229-typescript-workshop.html
 
+<hr>
+
+![npm](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_npm.png)
 
 ## npm targets
 
@@ -223,4 +231,3 @@ Die Konfiguration für Jest befindet sich in der `/package.json` im Abschnitt `j
 `npm run test:jest-coverage`
 
 Gleiches Verhalten wie das Target `test:jest` und im Anschluß wird die Code Coverage unter `/coverage` generiert.
-
