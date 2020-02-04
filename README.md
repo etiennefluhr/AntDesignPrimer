@@ -1,8 +1,8 @@
 
 
-# Ant Design Web-Frontend Workshop
-
 ![Ant Design](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_ant_design.png)
+
+# Ant Design Web-Frontend Workshop
 
 In diesem Workshop wollen wir die Komponentenbibliothek Ant Design im praktischen Einsatz kennenlernen. Die geniale 
  React-Komponentenbibliothek Ant Design bietet eine vollständige Palette an hochwertigen, responsiven und
@@ -10,9 +10,9 @@ In diesem Workshop wollen wir die Komponentenbibliothek Ant Design im praktische
  kompletter Webpräsenzen ohne dafür eine einzige Zeile HTML oder CSS Code schreiben zu müssen.
 
 
-## npm Tech Stack
-
 ![npm](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_npm.png)
+
+## npm Tech Stack
 
 Zum Bauen unseres Web-Frontends nutzen wir den Paketmanager npm. Mit diesem können wir schnell und einfach
  einen modernen Web-Frontend Tech Stack unter Verwendung der Technologien TypeScript, Webpack und React realisieren.
@@ -32,9 +32,9 @@ Insgesamt kommen die folgenden Technologien zum Einsatz:
 - TSLint 5.16
 
 
-## The International Chuck Norris Database
-
 ![The International Chuck Norris Database](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/icndb.png)
+
+## The International Chuck Norris Database
 
 Als fertig bestehendes **Backend** für unser Frontend-Projekt bietet sich die **International
  Chuck Norris Database** an, eine einfache und klar strukturierte REST-API die wir mit der integrierten
@@ -54,9 +54,9 @@ Als fertig bestehendes **Backend** für unser Frontend-Projekt bietet sich die *
 ```
 
 
-## Installation
-
 ![Installation](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/install.png)
+
+## Installation
 
 Der folgende Befehl installiert alle npm Pakete die der genannte Tech Stack verwendet und die in der Datei
  **package.json** aufgelistet sind. Die in dieser Datei im Bereich **script** aufgelisteten npm Targets stehen
@@ -65,9 +65,9 @@ Der folgende Befehl installiert alle npm Pakete die der genannte Tech Stack verw
 `npm install`
 
 
-## Entwicklung
-
 ![Entwicklung](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/develop.png)
+
+## Entwicklung
 
 Zum Bauen und Betrieben des Web-Frontends kann mit dem folgenden Befehl der Webpack Dev Server gestartet werden:
 
@@ -81,25 +81,25 @@ Beim allen Änderungen am Projektcode baut der Webpack Dev Server das Frontend s
  Webseite im Browser.
 
 
-## Aufgaben
-
 ![Aufgaben](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/exam.png)
+
+## Aufgaben
 
 Hier sind nun zwei Übungsaufgaben, die es durch Erweiterungen im TypeScript-Code umzusetzen gilt:
 
-### 1. Anzeige eines Progress-Bars 
+#### 1. Anzeige eines Progress-Bars 
 Eine neue Instanz der Komponente **Progress**
  aus dem Ant Design Framework soll in der Komponente **RandomJoke** anzeigen, wieviele
  Chuck Norris-Witze der maximal täglich ertragbaren Anzahl von 10 bereits angezeigt wurden.
 
-### 2. Anzeige einer Notification für leere Seiten
+#### 2. Anzeige einer Notification für leere Seiten
 Zeigen Sie einen **Notification** Dialog mit einer sprechenden Beschreibung und der Severity INFO aus dem Ant Design Framework
  an, wenn der Benutzer einen Menüpunkt auswählt, für den im **Content**-Bereich noch "To be defined .." angezeigt wird.
 
 
-## Folgeworkshops
-
 ![Hand Outs](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/handout.png)
+
+## Folgeworkshops
 
 Hier sind ein paar weiterführende Workshops zur Vertiefung der einzelnen verwendeten Technologien unseres Tech Stacks:
 
