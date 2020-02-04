@@ -35,13 +35,13 @@ Alle Einstellungen für Webpack siedeln in der `/webpack.config.js` an.
 ### Webpack in production ausführen
 `npm run webpack:production`
 
-Gleiches Verhalten wie das target `webpack:development` nur dass das Kompilat unter
+Gleiches Verhalten wie das target `webpack:dev` nur dass das Kompilat unter
  `dist/js/bundle.js` minifiziert und obfuskiert wird.
 
 ### Den Webpack Dev Server starten
 `npm run webpack:devserver`
 
-Gleiches Verhalten wie das Target `webpack:development` es wird allerdings kein Output unter
+Gleiches Verhalten wie das Target `webpack:dev` es wird allerdings kein Output unter
  `bin` oder `dist/js/bundle.js` erstellt. Stattdessen wird die Resource `dist/js/bundle.js`
  virtuell für den Webpack Dev Server zur Verfügung gestellt und der gesamte Ordner `/dist`
  in den Webpack Dev Server gemountet.
