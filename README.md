@@ -131,5 +131,5 @@ https://blog.mayflower.de/6229-typescript-workshop.html
 ## npm targets
 
 Eine ausführliche Übersicht über die Funktionsweise aller npm-Targets unseres npm-Tech Stacks kann in der
- MarkDown-Datei [NPM-TARGETS.md](https://github.com/christopherstock/AntDesignPrimer/raw/master/NPM-TARGETS.md)
+ MarkDown-Datei [NPM-TARGETS.md](https://github.com/christopherstock/AntDesignPrimer/blob/master/NPM-TARGETS.md)
  eingesehen werden.
