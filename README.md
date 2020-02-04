@@ -80,7 +80,7 @@ Die gebaute und in den Webpack Dev Server gemountete Frontend Anwendung kann jet
  
 `http://localhost:5000/`
 
-Es sollte das folgende Frontend zu sehen sein:
+Es sollte das folgende Frontend im Browser zu sehen sein:
 
 ![Frontend](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/frontend.jpg)
 
