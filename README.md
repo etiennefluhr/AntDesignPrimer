@@ -1,5 +1,5 @@
 
-# Ant Design<br>Web-Frontend Workshop
+# Ant Design Web-Frontend Workshop
 
 ![Ant Design](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_ant_design.png)
 
@@ -12,10 +12,9 @@ In diesem Workshop wollen wir die Komponentenbibliothek Ant Design im praktische
 
 ![npm](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_npm.png)
 
-
-Wir erstellen damit ein minimales Web-Frontend, das mit den Technlogien TypeScript, Webpack und React realisiert wird
- und hierfür einen modernen npm-TechStack mit zahlreichen Zusatztools (Tests, Linter usw.) breitstellt.
- Die Requests zum Backend erfolgen über die integrierte JavaScript Fetch API.
+Zum Bauen unseres Web-Frontends nutzen wir den Paketmanager npm. Mit diesem können wir schnell und einfach
+ einen modernen Web-Frontend TechStack unter Verwendung der Technologien TypeScript, Webpack und React realisieren.
+ Außerdem können wir zahlreiche Zusatztools wie Tests, Linter und CSS-Präprozessoren aus der npm Registry nutzen.
 
 ## Tech Stack
 - Ant Design 3.1
@@ -34,7 +33,7 @@ Wir erstellen damit ein minimales Web-Frontend, das mit den Technlogien TypeScri
 ## Web-Backend:<br>The International Chuck Norris Database
 
 Als bestehendes Backend für unser Frontend-Projekt bietet sich die **International
- Chuck Norris Database** an, eine simple REST-API die wir mit der JavaScript Fetch API ansprechen können
+ Chuck Norris Database** an, eine simple REST-API die wir mit der integrierten JavaScript Fetch API ansprechen können
  und die uns mit unendlich vielen Chuck Norris Witzen versorgt. Beispielsweise liefert hier ein
  simpler GET-Request auf http://api.icndb.com/jokes/random einen entsprechenden Response Body im 
  JSON Format zurück, den wir anschließend parsen und in unserem Frontend anzeigen können:
