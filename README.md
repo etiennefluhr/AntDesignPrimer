@@ -12,7 +12,7 @@ In diesem Workshop wollen wir die Komponentenbibliothek Ant Design im praktische
 
 ![npm](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_npm.png)
 
-## npm Tech Stack
+## npm-Tech Stack
 
 Zum Bauen unseres Web-Frontends nutzen wir den Paketmanager npm. Mit diesem können wir schnell und einfach
  einen modernen Web-Frontend Tech Stack unter Verwendung der Technologien TypeScript, Webpack und React realisieren.
