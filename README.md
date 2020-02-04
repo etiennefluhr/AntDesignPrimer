@@ -55,6 +55,9 @@ Als fertig bestehendes **Backend** für unser Frontend-Projekt bietet sich die *
 
 
 ## Installation
+
+![Installation](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/install.png)
+
 Der folgende Befehl installiert alle npm Pakete die der genannte Tech Stack verwendet und die in der Datei
  **package.json** aufgelistet sind. Die in dieser Datei im Bereich **script** aufgelisteten npm Targets stehen
  anschließend zur Verfügung. 
@@ -63,23 +66,26 @@ Der folgende Befehl installiert alle npm Pakete die der genannte Tech Stack verw
 
 
 ## Entwicklung
-Zum Betrieb des Web-Frontends kann mit dem folgenden Befehl der Webpack Dev Server gestartet werden:
+
+![Entwicklung](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/develop.png)
+
+Zum Bauen und Betrieben des Web-Frontends kann mit dem folgenden Befehl der Webpack Dev Server gestartet werden:
 
 `npm run webpack:devserver`
 
-Die in den Webpack Dev Server gemountete Frontend Anwendung kann im Browser eingesehen werden unter der Adresse
+Die gebaute und in den Webpack Dev Server gemountete Frontend Anwendung kann jetzt im Browser eingesehen werden unter:
  
- `http://localhost:5000/`
+`http://localhost:5000/`
 
-Beim allen Änderungen am Projektcode baut der Webpack Dev Server das Frontend automatisch und lädt die Webseite
- im Browser selbstständig neu.
+Beim allen Änderungen am Projektcode baut der Webpack Dev Server das Frontend selbstständig neu und aktualisiert die
+ Webseite im Browser.
 
 
 ## Aufgaben
 
-![Aufgaben](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/exam.jpg)
+![Aufgaben](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/exam.png)
 
-Hier nun zwei Übungsaufgaben die es umzusetzen gilt:
+Hier sind nun zwei Übungsaufgaben, die es durch Erweiterungen im TypeScript-Code umzusetzen gilt:
 
 ### 1. Anzeige eines Progress-Bars 
 Eine neue Instanz der Komponente **Progress**
@@ -91,43 +97,33 @@ Zeigen Sie einen **Notification** Dialog mit einer sprechenden Beschreibung und 
  an, wenn der Benutzer einen Menüpunkt auswählt, für den im **Content**-Bereich noch "To be defined .." angezeigt wird.
 
 
+## Folgeworkshops
+
 ![Hand Outs](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/handout.png)
 
-## Hand Outs
+Hier sind ein paar weiterführende Workshops zur Vertiefung der einzelnen verwendeten Technologien unseres Tech Stacks:
 
-### Warum TypeScript?
+#### Warum TypeScript?
 
 https://blog.mayflower.de/6135-typescript.html
 
-### Aufsetzen eines Web-Tech Stacks mit npm, TypeScript und Webpack
+#### Aufsetzen eines Web-Tech Stacks mit npm, TypeScript und Webpack
 
 https://blog.mayflower.de/6324-typescript-tooling-npm-webpack.html
 
-### TypeScript im Vergleich zu Java
+#### TypeScript im Vergleich zu Java
 
 https://blog.mayflower.de/6344-typeacript-java-entwickler.html
 
-### TypeScript Workshop für Einsteiger
+#### TypeScript Workshop für Einsteiger
 
 https://blog.mayflower.de/6229-typescript-workshop.html
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## npm targets
 
-Mit den folgenden Befehlen können die einzelnen Tools unseres npm-Tech Stacks ausgeführt werden. Zum Entwickeln selbst
+Mit den folgenden Befehlen können die einzelnen Tools unseres npm-Tech Stacks ausgeführt werden.
+ Jeder Befehl Zum Entwickeln selbst
 
 ![TypeScript](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_typescript.png)
 
@@ -227,5 +223,4 @@ Die Konfiguration für Jest befindet sich in der `/package.json` im Abschnitt `j
 `npm run test:jest-coverage`
 
 Gleiches Verhalten wie das Target `test:jest` und im Anschluß wird die Code Coverage unter `/coverage` generiert.
-
 
