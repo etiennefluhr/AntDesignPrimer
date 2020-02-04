@@ -82,7 +82,7 @@
                     onClick={ ( me: React.MouseEvent ) :void => { this.onClickJokeButton(); } }
                     loading={  this.state.requestInProgress }
                 >
-                    Get a Random Joke
+                    Request a Random Joke
                 </antd.Button>
 
                 <antd.Divider />
@@ -92,10 +92,16 @@
                     ? <antd.List
                         dataSource={ this.state.jokes }
                         renderItem={
+
+                            // TODO extract to method .createJokeLine()
                             ( item:chuck.RandomJokeResponse, index:number ) :JSX.Element => {
+
+                                const id   :number = ( index + 1 );
+                                const fact :string = item.value.joke.replace( /&quot;/g, '"' );
+
                                 return (
                                     <antd.List.Item>
-                                        { ( index + 1 ) }: { item.value.joke }
+                                        { id }: { fact }
                                     </antd.List.Item>
                                 );
                             }

@@ -169,12 +169,6 @@ Eine neue Instanz der Komponente **Progress**
 Zeigen Sie einen **Notification** Dialog mit einer sprechenden Beschreibung und der Severity INFO aus dem Ant Design Framework
  an, wenn der Benutzer einen Menüpunkt auswählt, für den im **Content**-Bereich noch "To be defined .." angezeigt wird.
 
-### 3. Fixen des "Unmounted Component" Problems
-Dauert die Verbindung zur API etwas länger, so kann der Benutzer, während gerade ein RandomJoke requested wird,
- zu einem anderen Menüpunkt wechseln. In diesem Fall ist beim Eintreffen der API-Response die Komponente **RandomJoke**
- nicht mehr gemountet und React reagiert mit dem Fehler **setState in unmounted component**.
- Finden Sie hierfür eine professionelle Lösung und bauen Sie diese in den Workshop ein.
-
 ![Hand Outs](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/handout.png)
 
 ## Hand Outs
