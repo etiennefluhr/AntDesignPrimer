@@ -6,6 +6,8 @@
 Hier gibt es eine ausführliche Übersicht aller npm-Targets mit kurzer Beschreibung derer Funktionsweise. Mit den 
  angegebenen Befehlen können die einzelnen Tools unseres npm-Tech Stacks ausgeführt werden:
 
+<hr>
+
 ![TypeScript](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_typescript.png)
 
 ### TypeScript nach JavaScript kompilieren
@@ -13,6 +15,8 @@ Hier gibt es eine ausführliche Übersicht aller npm-Targets mit kurzer Beschrei
 
 Kompiliert alle TypeScript Quellcodes von `/src` nach JavaScript unter `/bin`.
  Die Einstellungen für den TypeScript Compiler befinden sich unter `/tsconfig.json`.
+
+<hr>
 
 ![Webpack](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_webpack.png)
 
@@ -55,12 +59,16 @@ Damit HTTP Requests auf die API gelingen muss die CORS-Policy deaktiviert werden
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security --user-data-dir /tmp
 ```
 
+<hr>
+
 ![TypeDoc](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_typedoc.png)
 
 ### TypeDoc generieren
 `npm run typedoc:generate`
 
 Generiert eine HTML Dokumentation unter `/doc` für alle TypeScript Quellcodes unter `/src/typescript`.
+
+<hr>
 
 ![ESLint](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_eslint.png)
 
@@ -70,6 +78,8 @@ Generiert eine HTML Dokumentation unter `/doc` für alle TypeScript Quellcodes u
 Führt den ESLinter für alle Quellcodes unter `/src` aus.
 
 Einstellungen für den Linter befinden sich unter `/.eslintrc.js`.
+
+<hr>
 
 ![TSLint](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_tslint.png)
 
@@ -82,6 +92,8 @@ Führt den TypeScript Linter für alle Quellcodes unter `/src` aus. Das Tool TSL
 
 Einstellungen für den Linter befinden sich unter `/tslint.json`.
 
+<hr>
+
 ![Mocha](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_mocha.png)
 
 ### Alle TypeScript Tests mit Mocha aufrufen
@@ -89,6 +101,8 @@ Einstellungen für den Linter befinden sich unter `/tslint.json`.
 
 Ruft den Mocha Test Runner auf der alle definierten Tests in TypeScript Dateien unterhalb `/src/test` ausführt.
 Die Konfiguration für den Testrunner wird als Parameter im Anschluß an den Befehl definiert.
+
+<hr>
 
 ![Jest](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_jest.png)
 
