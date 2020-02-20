@@ -9,8 +9,7 @@
 # Node.js
 /node_modules
 
-# build and output paths
+# tool paths
 /bin
 /doc
-/dist/js
 /coverage
