@@ -3,6 +3,8 @@
     import * as React     from 'react';
     import * as chuck     from '../..';
     import { RandomJoke } from '../..';
+    import {ReactDOM} from "react";
+    import {notification} from "antd";
 
     /** ****************************************************************************************************************
     *   React properties for the Content component.
@@ -55,7 +57,30 @@
                 default:
                 {
                     // TODO show a Notification that this content is subject to change
-                    return <div>
+
+
+                    const openNotificationWithIcon = type => {
+                        notification[type]({
+                            message: 'Notification Title',
+                            description:
+                                'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+                        });
+                    };
+
+                    openNotificationWithIcon( 'error' );
+/*
+                    notification
+                        .open({
+                        message: 'To be defined.',
+                        description:
+                            'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+                        onClick: () => {
+                            console.log('Notification Clicked!');
+                        },
+                    });
+*/
+                     return <div>
+
                         To be defined ..
                     </div>;
                 }
