@@ -10,6 +10,12 @@ In diesem Workshop wollen wir die Komponentenbibliothek Ant Design im praktische
 
 <hr>
 
+## Online-Demo
+https://christopherstock.github.io/AntDesignPrimer/dist/
+(URL-Request sind leider geblockt aufgrund CORS-Policy)
+
+<hr>
+
 ![npm](https://github.com/christopherstock/AntDesignPrimer/raw/master/_ASSET/readme/150px/logo_npm.png)
 
 ## npm-Tech Stack
