@@ -2,6 +2,7 @@
     import * as React from 'react';
     import * as antd  from 'antd';
     import * as chuck from '../..';
+    import {Progress} from "antd";
 
     /** ****************************************************************************************************************
     *   The React state for the RandomJoke component.
@@ -74,8 +75,14 @@
         {
             chuck.Debug.react.log( 'RandomJoke.render() being invoked' );
 
+            const MAX_JOKES :number = 10;
+
             // TODO show a Progress bar with maximum sustainable 'Chuck Norris Jokes per day' count
             return <div>
+
+                <Progress type="circle" percent={ 100 * this.state.jokes.length / MAX_JOKES } format={percent => `${percent / MAX_JOKES} jokes`} />
+
+                <antd.Divider />
 
                 <antd.Button
                     type="primary"
