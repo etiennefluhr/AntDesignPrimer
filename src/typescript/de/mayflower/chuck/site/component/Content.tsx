@@ -61,9 +61,9 @@
 
                     const openNotificationWithIcon = type => {
                         notification[type]({
-                            message: 'Notification Title',
+                            message: 'Not available',
                             description:
-                                'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+                                'This is the content is not available.',
                         });
                     };
 
